@@ -5,8 +5,9 @@ import config from '@/store/modules/config'
 import sidebar from '@/store/modules/sidebar'
 import { getItemStatusFromInsight } from '@/dataplane'
 import { ONLINE, OFFLINE, PARTIALLY_DEGRADED } from '@/consts'
+import onboarding from '@/store/modules/onboarding'
 
-import { fetchAllResources, filterResourceByMesh } from '@/helpers'
+import { fetchAllResources } from '@/helpers'
 import { getEmptyInsight, mergeInsightsReducer, parseInsightReducer } from '@/store/reducers/mesh-insights'
 import Kuma from '@/services/kuma'
 
@@ -20,6 +21,7 @@ export default (): Module<RootInterface, RootInterface> => ({
   modules: {
     sidebar,
     config,
+    onboarding,
   },
   state: {
     menu: null,

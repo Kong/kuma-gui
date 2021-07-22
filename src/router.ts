@@ -328,6 +328,50 @@ export default (store: Store<RootInterface>) => {
         },
       ],
     },
+    // Onboarding
+    {
+      path: '/onboarding',
+      redirect: { name: 'onboarding-welcome' },
+      component: () => import(/* webpackChunkName: "shell-empty" */ '@/views/ShellEmpty.vue'),
+      children: [
+        {
+          path: 'welcome',
+          name: 'onboarding-welcome',
+          meta: {
+            hideStatus: true,
+            onboardingProcess: true
+          },
+          component: () => import(/* webpackChunkName: "onboarding-welcome" */ '@/views/Onboarding/Welcome.vue')
+        },
+        {
+          path: 'introduction',
+          name: 'onboarding-introduction',
+          meta: {
+            hideStatus: true,
+            onboardingProcess: true
+          },
+          component: () => import(/* webpackChunkName: "onboarding-introduction" */ '@/views/Onboarding/Introduction.vue')
+        },
+        {
+          path: 'backend-types',
+          name: 'onboarding-backend-types',
+          meta: {
+            hideStatus: true,
+            onboardingProcess: true
+          },
+          component: () => import(/* webpackChunkName: "onboarding-backend-types" */ '@/views/Onboarding/BackendTypes.vue')
+        },
+        {
+          path: 'populating-mesh',
+          name: 'onboarding-populating-mesh',
+          meta: {
+            hideStatus: true,
+            onboardingProcess: true
+          },
+          component: () => import(/* webpackChunkName: "onboarding-populating-mesh" */ '@/views/Onboarding/PopulatingMesh.vue')
+        },
+      ]
+    },
     {
       // Entity Wizard
       path: '/wizard',
