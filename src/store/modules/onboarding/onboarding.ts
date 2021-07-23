@@ -5,14 +5,18 @@ import { OnboardingInterface } from './onboarding.types'
 const state: OnboardingInterface = {
   isCompleted: localStorage.getItem('onboarding/isCompleted') === 'true',
   step: localStorage.getItem('onboarding/step') || 'onboarding-welcome',
+  mode: 'demo',
 }
 
 const mutations: MutationTree<OnboardingInterface> = {
   SET_STEP: (state, step) => (state.step = step),
   SET_IS_COMPLETED: (state, isCompleted) => (state.isCompleted = isCompleted),
+  UPDATE_MODE: (state, message) => (state.mode = message),
 }
 
-const getters: GetterTree<OnboardingInterface, RootInterface> = {}
+const getters: GetterTree<OnboardingInterface, RootInterface> = {
+  getMode: state => state.mode,
+}
 
 const actions: ActionTree<OnboardingInterface, RootInterface> = {
   // complete/skip onboarding

@@ -1,78 +1,83 @@
 <template>
   <div class="container mx-auto">
     <div>
-      <div class="h-40">
-        <h1>Welcome to {{ title }}</h1>
-      </div>
+      <OnboardingHeading
+        title="Adding new DPPs"
+      />
       <div class="md:w-4/5 lg:w-3/5 mx-auto">
-        <p class="my-4">
-          Congratulations for downloading {{ title }}! In just few steps your
-          service mesh will be fully online
-        </p>
-
-        <div class="md:w-2/3 mx-auto">
-          <p class="flex items-center mb-2">
-            <KIcon
-              class="mr-2"
-              icon="check"
-              color="var(--logo-green)"
-            />
+        <FormFragment
+          all-inline
+          equal-cols
+          hide-label-col
+        >
+          <label for="demo">
+            <input
+              id="demo"
+              v-model="mode"
+              class="k-input"
+              type="radio"
+              name="k8s-services"
+              value="demo"
+              checked
+            >
             <span>
-              Automatically detected running in {{ mode }} deployment
+              Demo application
             </span>
-          </p>
-
-          <p class="flex items-center mb-2">
-            <KIcon
-              class="mr-2"
-              icon="check"
-              color="var(--logo-green)"
-            />
+          </label>
+          <label for="manual">
+            <input
+              id="manual"
+              v-model="mode"
+              class="k-input"
+              type="radio"
+              name="k8s-services"
+              value="manual"
+            >
             <span>
-              Automatically detected running in <span class="capitalize">{{ appSource }}</span>
+              Manually
             </span>
-          </p>
-        </div>
+          </label>
+        </FormFragment>
       </div>
     </div>
-    <div class="mt-4 flex justify-center">
-      <KButton
-        class="mr-4"
-        appearance="primary"
-        :to="{
-          name: 'global-overview',
-        }"
-      >
-        Get Started
-      </KButton>
-      <KButton
-        appearance="secondary"
-        :to="{
-          name: 'global-overview'
-        }"
-      >
-        or Skip
-      </KButton>
-    </div>
+    <OnboardingNavigation
+      next-step="onboarding-adding-dpp-code"
+      previous-step="onboarding-populating-mesh"
+    />
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
+import FormFragment from '@/views/Wizard/components/FormFragment'
+import OnboardingNavigation from '@/views/Onboarding/components/OnboardingNavigation'
+import OnboardingHeading from '@/views/Onboarding/components/OnboardingHeading'
 
 export default {
   name: 'AddingDataplanes',
+  components: {
+    FormFragment,
+    OnboardingNavigation,
+    OnboardingHeading
+  },
   computed: {
     ...mapGetters({
-      getMulticlusterStatus: 'config/getMulticlusterStatus',
-      title: 'config/getTagline',
-      appSource: 'config/getEnvironment',
+      onboardingMode: 'onboarding/getMode',
     }),
-    mode() {
-      return this.getMulticlusterStatus ? ' Multi-Zone ' : ' Standalone '
+    mode: {
+      get () {
+        return this.onboardingMode
+      },
+      set (value) {
+        this.update(value)
+      }
     }
-
   },
+  methods: {
+    ...mapMutations({
+      update: 'onboarding/UPDATE_MODE',
+    }),
+  }
 }
 </script>
 

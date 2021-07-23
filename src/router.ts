@@ -370,6 +370,24 @@ export default (store: Store<RootInterface>) => {
           },
           component: () => import(/* webpackChunkName: "onboarding-populating-mesh" */ '@/views/Onboarding/PopulatingMesh.vue')
         },
+        {
+          path: 'adding-dpp',
+          name: 'onboarding-adding-dpp',
+          meta: {
+            hideStatus: true,
+            onboardingProcess: true
+          },
+          component: () => import(/* webpackChunkName: "onboarding-adding-dpp" */ '@/views/Onboarding/AddingDataplanes.vue')
+        },
+        {
+          path: 'adding-dpp-code',
+          name: 'onboarding-adding-dpp-code',
+          meta: {
+            hideStatus: true,
+            onboardingProcess: true
+          },
+          component: () => import(/* webpackChunkName: "onboarding-adding-dpp-code" */ '@/views/Onboarding/AddingDataplanesCode.vue')
+        },
       ]
     },
     {

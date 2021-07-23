@@ -3,7 +3,10 @@
     <h1 class="text-center text-4xl mb-6">
       {{ title }}
     </h1>
-    <p class="text-center">
+    <p
+      v-if="description"
+      class="text-center"
+    >
       {{ description }}
     </p>
   </div>
@@ -19,7 +22,7 @@ export default {
     },
     description: {
       type: String,
-      required: true
+      default: ''
     }
   }
 }

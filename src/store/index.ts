@@ -25,7 +25,6 @@ export default (): Module<RootInterface, RootInterface> => ({
   },
   state: {
     menu: null,
-    onboardingComplete: false,
     globalLoading: true,
     meshPageSize: 500,
     pageSize: 500,
@@ -115,7 +114,6 @@ export default (): Module<RootInterface, RootInterface> => ({
     },
   },
   mutations: {
-    SET_ONBOARDING_STATUS: (state, status) => (state.onboardingComplete = status),
     SET_GLOBAL_LOADING: (state, { globalLoading }) => (state.globalLoading = globalLoading),
     FETCH_ALL_MESHES: (state, meshes) => (state.meshes = meshes),
     FETCH_DATAPLANES_FROM_MESH: (state, dataplanes) => (state.dataplanes = dataplanes),

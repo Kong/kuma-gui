@@ -307,7 +307,6 @@ export default {
 
     completeOnboarding() {
       this.$store.dispatch('updateOnboardingStatus', true)
-
       setItemToStorage('kumaOnboardingComplete', true)
     },
   },
