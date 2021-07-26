@@ -7,39 +7,20 @@
       />
       <div class="md:w-4/5 lg:w-3/5 mx-auto">
         <component :is="currentGraph" />
-        <FormFragment
-          all-inline
-          equal-cols
-          hide-label-col
+        <KRadio
+          v-model="mode"
+          name="mode"
+          value="standalone"
         >
-          <label for="standalone">
-            <input
-              id="standalone"
-              v-model="mode"
-              class="k-input"
-              type="radio"
-              name="k8s-services"
-              value="standalone"
-              checked
-            >
-            <span>
-              Standalone Deployment
-            </span>
-          </label>
-          <label for="multi-zone">
-            <input
-              id="multi-zone"
-              v-model="mode"
-              class="k-input"
-              type="radio"
-              name="k8s-services"
-              value="multi-zone"
-            >
-            <span>
-              Multi-Zone deployment
-            </span>
-          </label>
-        </FormFragment>
+          Standalone Deployment
+        </KRadio>
+        <KRadio
+          v-model="mode"
+          name="mode"
+          value="multi-zone"
+        >
+          Multi-Zone deployment
+        </KRadio>
       </div>
     </div>
 
@@ -52,7 +33,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import FormFragment from '@/views/Wizard/components/FormFragment'
 import MultiZoneDeploymentGraph from '@/views/Onboarding/components/MultiZoneDeploymentGraph'
 import StandaloneDeploymentGraph from '@/views/Onboarding/components/StandaloneDeploymentGraph'
 import OnboardingNavigation from '@/views/Onboarding/components/OnboardingNavigation'
@@ -61,7 +41,6 @@ import OnboardingHeading from '@/views/Onboarding/components/OnboardingHeading'
 export default {
   name: 'Introduction',
   components: {
-    FormFragment,
     MultiZoneDeploymentGraph,
     StandaloneDeploymentGraph,
     OnboardingNavigation,

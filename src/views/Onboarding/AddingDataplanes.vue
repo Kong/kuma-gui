@@ -5,39 +5,20 @@
         title="Adding new DPPs"
       />
       <div class="md:w-4/5 lg:w-3/5 mx-auto">
-        <FormFragment
-          all-inline
-          equal-cols
-          hide-label-col
+        <KRadio
+          v-model="mode"
+          name="deployment"
+          value="demo"
         >
-          <label for="demo">
-            <input
-              id="demo"
-              v-model="mode"
-              class="k-input"
-              type="radio"
-              name="k8s-services"
-              value="demo"
-              checked
-            >
-            <span>
-              Demo application
-            </span>
-          </label>
-          <label for="manual">
-            <input
-              id="manual"
-              v-model="mode"
-              class="k-input"
-              type="radio"
-              name="k8s-services"
-              value="manual"
-            >
-            <span>
-              Manually
-            </span>
-          </label>
-        </FormFragment>
+          Demo
+        </KRadio>
+        <KRadio
+          v-model="mode"
+          name="deployment"
+          value="manual"
+        >
+          Manually
+        </KRadio>
       </div>
     </div>
     <OnboardingNavigation
@@ -49,14 +30,12 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
-import FormFragment from '@/views/Wizard/components/FormFragment'
 import OnboardingNavigation from '@/views/Onboarding/components/OnboardingNavigation'
 import OnboardingHeading from '@/views/Onboarding/components/OnboardingHeading'
 
 export default {
   name: 'AddingDataplanes',
   components: {
-    FormFragment,
     OnboardingNavigation,
     OnboardingHeading
   },

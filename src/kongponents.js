@@ -11,6 +11,7 @@ import KIcon from '@kongponents/kicon'
 import KTable from '@kongponents/ktable'
 import KClipboardProvider from '@kongponents/kclipboardprovider'
 import Krumbs from '@kongponents/krumbs'
+import KRadio from '@kongponents/kradio/dist/KRadio.umd.min.js'
 import KPop from '@kongponents/kpop'
 import KTabs from '@kongponents/ktabs'
 
@@ -24,4 +25,5 @@ Vue.component('KTable', KTable)
 Vue.component('KClipboardProvider', KClipboardProvider)
 Vue.component('Krumbs', Krumbs)
 Vue.component('KPop', KPop)
+Vue.component('KRadio', KRadio)
 Vue.component('KTabs', KTabs)
