@@ -1,79 +1,102 @@
 <template>
   <div class="container mx-auto">
     <div>
-      <div class="h-40">
-        <h1>Welcome to {{ title }}</h1>
-      </div>
+      <OnboardingHeading
+        title="Waiting for DPPs"
+        description="Now that we have deployed our first DPPs (data plane proxies), we need to wait for them to come online:"
+      />
       <div class="md:w-4/5 lg:w-3/5 mx-auto">
-        <p class="my-4">
-          Congratulations for downloading {{ title }}! In just few steps your
-          service mesh will be fully online
-        </p>
+        <div class="justify-center flex my-4">
+          <KIcon
+            v-if="!getDataplanesList.length"
+            icon="spinner"
+            color="rgba(0, 0, 0, 0.2)"
+            size="42"
+          />
 
-        <div class="md:w-2/3 mx-auto">
-          <p class="flex items-center mb-2">
-            <KIcon
-              class="mr-2"
-              icon="check"
-              color="var(--logo-green)"
-            />
-            <span>
-              Automatically detected running in {{ mode }} deployment
-            </span>
-          </p>
-
-          <p class="flex items-center mb-2">
-            <KIcon
-              class="mr-2"
-              icon="check"
-              color="var(--logo-green)"
-            />
-            <span>
-              Automatically detected running in <span class="capitalize">{{ appSource }}</span>
-            </span>
-          </p>
+          <div
+            v-else
+            class="data-table-wrapper"
+          >
+            <KTable :options="tableData">
+              <template
+                v-slot:status="{ rowValue }"
+              >
+                <div
+                  class="entity-status"
+                  :class="{ 'is-offline': (rowValue.toLowerCase() === 'offline' || rowValue === false) }"
+                >
+                  <span class="entity-status__dot" />
+                  <span class="entity-status__label">{{ rowValue }}</span>
+                </div>
+              </template>
+            </KTable>
+          </div>
         </div>
       </div>
     </div>
-    <div class="mt-4 flex justify-center">
-      <KButton
-        class="mr-4"
-        appearance="primary"
-        :to="{
-          name: 'global-overview',
-        }"
-      >
-        Get Started
-      </KButton>
-      <KButton
-        appearance="secondary"
-        :to="{
-          name: 'global-overview'
-        }"
-      >
-        or Skip
-      </KButton>
-    </div>
+    <OnboardingNavigation
+      next-step="onboarding-adding-dpp-code"
+      previous-step="onboarding-adding-dpp-code"
+      :should-display-next="getDataplanesList.length > 0"
+    />
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
+import debounce from 'lodash/debounce'
+import OnboardingNavigation from '@/views/Onboarding/components/OnboardingNavigation'
+import OnboardingHeading from '@/views/Onboarding/components/OnboardingHeading'
 
 export default {
   name: 'DataplanesOverview',
-  computed: {
-    ...mapGetters({
-      getMulticlusterStatus: 'config/getMulticlusterStatus',
-      title: 'config/getTagline',
-      appSource: 'config/getEnvironment',
-    }),
-    mode() {
-      return this.getMulticlusterStatus ? ' Multi-Zone ' : ' Standalone '
-    }
-
+  components: {
+    OnboardingNavigation,
+    OnboardingHeading
   },
+  computed: {
+    ...mapGetters(['getDataplanesList']),
+    tableData() {
+      return {
+        headers: [
+          { label: 'Status', key: 'status' },
+          { label: 'Name', key: 'name' },
+          { label: 'Mesh', key: 'mesh' }
+        ],
+        data: this.getDataplanesList
+      }
+    }
+  },
+  watch: {
+    getDataplanesList: debounce(function(val) {
+      if (!val.length) {
+        this.getAllDataplanes({ size: 10 })
+      }
+    }, 1000),
+  },
+  created() {
+    this.getAllDataplanes({ size: 10 })
+  },
+  methods: {
+    ...mapActions(['getAllDataplanes']),
+  }
 }
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+
+.data-table-wrapper {
+  overflow: hidden;
+  border: 1px solid var(--gray-4);
+  background: none;
+  border-radius: 4px;
+
+  .k-table thead {
+    background-color: var(--gray-5);
+    border-top: 0;
+  }
+
+}
+
+</style>

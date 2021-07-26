@@ -35,7 +35,7 @@
     </div>
 
     <OnboardingNavigation
-      next-step="onboarding-adding-dpp-code"
+      next-step="onboarding-dataplanes-overview"
       previous-step="onboarding-adding-dpp"
     />
   </div>
@@ -97,5 +97,3 @@ export default {
 
 }
 </script>
-
-<style scoped></style>

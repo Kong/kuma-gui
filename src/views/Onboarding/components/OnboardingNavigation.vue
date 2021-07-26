@@ -60,6 +60,7 @@
       </KButton>
     </div>
     <KButton
+      v-if="shouldDisplayNext"
       appearance="primary"
       :to="{
         name: nextStep,
@@ -79,6 +80,10 @@ export default {
     gettingStarted: {
       type: Boolean,
       defalut: false,
+    },
+    shouldDisplayNext: {
+      type: Boolean,
+      default: true
     },
     nextStep: {
       type: String,
