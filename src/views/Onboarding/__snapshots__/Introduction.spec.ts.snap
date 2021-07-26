@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Introduction.vue renders snapshot 1`] = `
+<div>
+  <div
+    class="container mx-auto"
+  >
+    <div>
+      <div>
+        <h1
+          class="text-center text-4xl mb-6"
+        >
+          
+    Introduction
+  
+        </h1>
+         
+        <p
+          class="text-center"
+        >
+          
+    To get started with Kuma, we must first take a look at a few basic concepts.
+  
+        </p>
+      </div>
+       
+      <div
+        class="md:w-4/5 lg:w-3/5 mx-auto"
+      >
+        <div>
+          <div
+            data-v-07815fc5=""
+          >
+            <span
+              data-v-07815fc5=""
+            >
+              Standalone 1
+            </span>
+             
+            <transition-stub
+              data-v-07815fc5=""
+              name="fade"
+            >
+              <div
+                class="k-popover"
+                data-v-07815fc5=""
+                style="width: 200px; display: none;"
+              >
+                <!---->
+                <div
+                  class="k-popover-content"
+                  data-v-07815fc5=""
+                >
+                  <div>
+                    <p>
+                      Text of Standalone 1
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </transition-stub>
+          </div>
+           
+          <div
+            data-v-07815fc5=""
+          >
+            <span
+              data-v-07815fc5=""
+            >
+              Standalone 2
+            </span>
+             
+            <transition-stub
+              data-v-07815fc5=""
+              name="fade"
+            >
+              <div
+                class="k-popover"
+                data-v-07815fc5=""
+                style="width: 200px; display: none;"
+              >
+                <!---->
+                <div
+                  class="k-popover-content"
+                  data-v-07815fc5=""
+                >
+                  <div>
+                    <p>
+                      Text of Standalone 2
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </transition-stub>
+          </div>
+        </div>
+         
+        <label
+          class="k-radio"
+          data-v-29a3af18=""
+          name="mode"
+        >
+          <input
+            class="k-input"
+            data-v-29a3af18=""
+            name="mode"
+            type="radio"
+          />
+          
+        Standalone Deployment
+      
+        </label>
+         
+        <label
+          class="k-radio"
+          data-v-29a3af18=""
+          name="mode"
+        >
+          <input
+            class="k-input"
+            data-v-29a3af18=""
+            name="mode"
+            type="radio"
+          />
+          
+        Multi-Zone deployment
+      
+        </label>
+      </div>
+    </div>
+     
+    <div
+      class="mt-4 flex justify-between"
+    >
+      <div>
+        <a
+          aria-current="page"
+          class="k-button mr-4 router-link-exact-active router-link-active secondary"
+          data-v-38fa8ecf=""
+          href="#/"
+          type="button"
+        >
+          
+      Back
+    
+        </a>
+         
+        <a
+          aria-current="page"
+          class="k-button skip-button router-link-exact-active router-link-active small btn-link"
+          data-v-38fa8ecf=""
+          href="#/"
+          type="button"
+        >
+          
+      or Skip
+    
+        </a>
+      </div>
+       
+      <a
+        aria-current="page"
+        class="k-button router-link-exact-active router-link-active primary"
+        data-v-38fa8ecf=""
+        href="#/"
+        type="button"
+      >
+        
+    Next
+  
+      </a>
+    </div>
+  </div>
+</div>
+`;

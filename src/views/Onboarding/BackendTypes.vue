@@ -53,7 +53,7 @@ export default {
     OnboardingHeading
   },
   data() {
-    return { mode: 'standalone' }
+    return { mode: 'kubernetess' }
   },
   computed: {
     ...mapGetters({
