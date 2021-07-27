@@ -29,27 +29,27 @@ exports[`Introduction.vue renders snapshot 1`] = `
       >
         <div>
           <div
-            data-v-07815fc5=""
+            data-v-3cb990b6=""
           >
             <span
-              data-v-07815fc5=""
+              data-v-3cb990b6=""
             >
               Standalone 1
             </span>
              
             <transition-stub
-              data-v-07815fc5=""
+              data-v-3cb990b6=""
               name="fade"
             >
               <div
                 class="k-popover"
-                data-v-07815fc5=""
+                data-v-3cb990b6=""
                 style="width: 200px; display: none;"
               >
                 <!---->
                 <div
                   class="k-popover-content"
-                  data-v-07815fc5=""
+                  data-v-3cb990b6=""
                 >
                   <div>
                     <p>
@@ -62,27 +62,27 @@ exports[`Introduction.vue renders snapshot 1`] = `
           </div>
            
           <div
-            data-v-07815fc5=""
+            data-v-3cb990b6=""
           >
             <span
-              data-v-07815fc5=""
+              data-v-3cb990b6=""
             >
               Standalone 2
             </span>
              
             <transition-stub
-              data-v-07815fc5=""
+              data-v-3cb990b6=""
               name="fade"
             >
               <div
                 class="k-popover"
-                data-v-07815fc5=""
+                data-v-3cb990b6=""
                 style="width: 200px; display: none;"
               >
                 <!---->
                 <div
                   class="k-popover-content"
-                  data-v-07815fc5=""
+                  data-v-3cb990b6=""
                 >
                   <div>
                     <p>
@@ -96,35 +96,45 @@ exports[`Introduction.vue renders snapshot 1`] = `
         </div>
          
         <label
-          class="k-radio"
-          data-v-29a3af18=""
+          class="k-radio d-inline-block"
+          data-v-b7148f78=""
           name="mode"
         >
           <input
-            class="k-input"
-            data-v-29a3af18=""
+            class="k-input float-left"
+            data-v-b7148f78=""
             name="mode"
             type="radio"
           />
-          
+          <span
+            class="float-left"
+            data-v-b7148f78=""
+          >
+            
         Standalone Deployment
       
+          </span>
         </label>
          
         <label
-          class="k-radio"
-          data-v-29a3af18=""
+          class="k-radio d-inline-block"
+          data-v-b7148f78=""
           name="mode"
         >
           <input
-            class="k-input"
-            data-v-29a3af18=""
+            class="k-input float-left"
+            data-v-b7148f78=""
             name="mode"
             type="radio"
           />
-          
+          <span
+            class="float-left"
+            data-v-b7148f78=""
+          >
+            
         Multi-Zone deployment
       
+          </span>
         </label>
       </div>
     </div>

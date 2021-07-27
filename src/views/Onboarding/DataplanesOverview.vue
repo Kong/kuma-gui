@@ -9,6 +9,7 @@
         <div class="justify-center flex my-4">
           <KIcon
             v-if="!getDataplanesList.length"
+            data-testid="loading"
             icon="spinner"
             color="rgba(0, 0, 0, 0.2)"
             size="42"

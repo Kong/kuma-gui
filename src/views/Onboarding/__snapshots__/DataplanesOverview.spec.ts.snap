@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataplanesOverview.vue renders snapshot 1`] = `
+<div>
+  <div
+    class="container mx-auto"
+  >
+    <div>
+      <div>
+        <h1
+          class="text-center text-4xl mb-6"
+        >
+          
+    Waiting for DPPs
+  
+        </h1>
+         
+        <p
+          class="text-center"
+        >
+          
+    Now that we have deployed our first DPPs (data plane proxies), we need to wait for them to come online:
+  
+        </p>
+      </div>
+       
+      <div
+        class="md:w-4/5 lg:w-3/5 mx-auto"
+      >
+        <div
+          class="justify-center flex my-4"
+        >
+          <div
+            class="data-table-wrapper"
+          >
+            <table
+              class="k-table has-hover side-border"
+              data-v-bfeabd48=""
+            >
+              <thead
+                data-v-bfeabd48=""
+              >
+                <tr
+                  data-v-bfeabd48=""
+                >
+                  <th
+                    class=""
+                    data-v-bfeabd48=""
+                  >
+                     Status 
+                  </th>
+                  <th
+                    class=""
+                    data-v-bfeabd48=""
+                  >
+                     Name 
+                  </th>
+                  <th
+                    class=""
+                    data-v-bfeabd48=""
+                  >
+                     Mesh 
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                data-v-bfeabd48=""
+              >
+                <tr
+                  data-v-bfeabd48=""
+                >
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    <div
+                      class="entity-status"
+                      data-v-bfeabd48=""
+                    >
+                      <span
+                        class="entity-status__dot"
+                        data-v-bfeabd48=""
+                      />
+                       
+                      <span
+                        class="entity-status__label"
+                        data-v-bfeabd48=""
+                      >
+                        Online
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    dataplane-test-456
+                  </td>
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    default
+                  </td>
+                </tr>
+                <tr
+                  data-v-bfeabd48=""
+                >
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    <div
+                      class="entity-status"
+                      data-v-bfeabd48=""
+                    >
+                      <span
+                        class="entity-status__dot"
+                        data-v-bfeabd48=""
+                      />
+                       
+                      <span
+                        class="entity-status__label"
+                        data-v-bfeabd48=""
+                      >
+                        Online
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    ingress-dp-test-123
+                  </td>
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    default
+                  </td>
+                </tr>
+                <tr
+                  data-v-bfeabd48=""
+                >
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    <div
+                      class="entity-status is-offline"
+                      data-v-bfeabd48=""
+                    >
+                      <span
+                        class="entity-status__dot"
+                        data-v-bfeabd48=""
+                      />
+                       
+                      <span
+                        class="entity-status__label"
+                        data-v-bfeabd48=""
+                      >
+                        Offline
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    no-subscriptions
+                  </td>
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    default
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="mt-4 flex justify-between"
+    >
+      <div>
+        <a
+          aria-current="page"
+          class="k-button mr-4 router-link-exact-active router-link-active secondary"
+          data-v-38fa8ecf=""
+          href="#/"
+          type="button"
+        >
+          
+      Back
+    
+        </a>
+         
+        <a
+          aria-current="page"
+          class="k-button skip-button router-link-exact-active router-link-active small btn-link"
+          data-v-38fa8ecf=""
+          href="#/"
+          type="button"
+        >
+          
+      or Skip
+    
+        </a>
+      </div>
+       
+      <a
+        aria-current="page"
+        class="k-button router-link-exact-active router-link-active primary"
+        data-v-38fa8ecf=""
+        href="#/"
+        type="button"
+      >
+        
+    Next
+  
+      </a>
+    </div>
+  </div>
+</div>
+`;

@@ -389,7 +389,7 @@ export default (store: Store<RootInterface>) => {
           component: () => import(/* webpackChunkName: "onboarding-adding-dpp-code" */ '@/views/Onboarding/AddingDataplanesCode.vue')
         },
         {
-          path: 'onboarding-dataplanes-overview',
+          path: 'dataplanes-overview',
           name: 'onboarding-dataplanes-overview',
           meta: {
             hideStatus: true,

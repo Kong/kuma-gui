@@ -5,7 +5,7 @@
         title="Adding new DPPs"
       />
       <div
-        v-if="onboardingMode==='dedmo'"
+        v-if="onboardingMode==='demo'"
         class="md:w-4/5 lg:w-3/5 mx-auto"
       >
         <CodeView
@@ -65,24 +65,20 @@ export default {
       --dataplane=${`"${json2yaml({
                   type: 'Dataplane',
                   mesh: 'default',
-                  name: 'redis',
+                  name: 'example',
                   networking: {
                     address: 'localhost',
                     inbound: [
                       {
                         port: 7777,
                         servicePort: 7777,
+                        serviceAddress: '127.0.0.1',
                         tags: {
-                          service: '127.0.0.1'
+                          'kuma.io/service': 'example',
+                          'kuma.io/protocol': 'tcp'
                         }
                       }
-                    ],
-                    gateway: {
-                      tags: {
-                        'kuma.io/service': 'redis',
-                        'kuma.io/protocol': 'http'
-                      }
-                    }
+                    ]
                   }
                 })}"`} \\
       --dataplane-token-file=kuma-token-example`
