@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <div>
+    <div class="min-h-96">
       <OnboardingHeading
         title="Backend Types"
         :description="`${title}, is a portable service mesh that can run on both Kubernetes, VMs or other containerized enviroments. You can also mix together different runtimes in a multi one deployment.`"

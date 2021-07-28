@@ -397,6 +397,15 @@ export default (store: Store<RootInterface>) => {
           },
           component: () => import(/* webpackChunkName: "onboarding-dataplanes-overview" */ '@/views/Onboarding/DataplanesOverview.vue')
         },
+        {
+          path: 'completed',
+          name: 'onboarding-completed',
+          meta: {
+            hideStatus: true,
+            onboardingProcess: true
+          },
+          component: () => import(/* webpackChunkName: "onboarding-completed" */ '@/views/Onboarding/Completed.vue')
+        },
       ]
     },
     {

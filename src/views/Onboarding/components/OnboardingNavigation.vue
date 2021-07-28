@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="gettingStarted"
+    v-if="simpleView"
     class="mt-4 flex justify-center"
   >
     <KButton
@@ -11,9 +11,10 @@
       }"
       @click.native="changeStep(nextStep)"
     >
-      Get Started
+      {{ simpleViewNextButtonText }}
     </KButton>
     <KButton
+      v-if="!hideSkip"
       class="skip-button"
       appearance="btn-link"
       size="small"
@@ -77,7 +78,15 @@ import { mapActions } from 'vuex'
 export default {
   name: 'OnboardingNavigation',
   props: {
-    gettingStarted: {
+    simpleView: {
+      type: Boolean,
+      defalut: false,
+    },
+    simpleViewNextButtonText: {
+      type: String,
+      default: ' Get Started',
+    },
+    hideSkip: {
       type: Boolean,
       defalut: false,
     },

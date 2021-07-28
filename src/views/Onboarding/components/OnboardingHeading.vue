@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1 class="text-center text-4xl mb-6">
+  <div class="mb-6">
+    <h1 class="text-center text-4xl mb-4 min-h-8">
       {{ title }}
     </h1>
     <p

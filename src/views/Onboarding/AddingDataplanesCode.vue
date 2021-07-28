@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <div>
+    <div class="min-h-96">
       <OnboardingHeading
         title="Adding new DPPs"
       />
@@ -8,6 +8,12 @@
         v-if="onboardingMode==='demo'"
         class="md:w-4/5 lg:w-3/5 mx-auto"
       >
+        <p
+          v-if="isMultiZone"
+          class="text-xs tracking-wider px-4 py-2 text-red-500"
+        >
+          Remember to apply yamls into control plane with "mode=zone"
+        </p>
         <CodeView
           title="Clone app and follow the steps"
           copy-button-text="Copy Command to Clipboard"
@@ -86,6 +92,7 @@ export default {
   },
   computed: {
     ...mapGetters({
+      isMultiZone: 'config/getMulticlusterStatus',
       env: 'config/getEnvironment',
       onboardingMode: 'onboarding/getMode',
     }),

@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <div>
+    <div class="min-h-96">
       <OnboardingHeading
         title="Populating Mesh"
         :description="`${title} is a multi-tenat system that can support multiple service meshes in the same cluster`"

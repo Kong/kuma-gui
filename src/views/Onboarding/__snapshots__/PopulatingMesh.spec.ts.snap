@@ -5,10 +5,14 @@ exports[`PopulatingMesh.vue renders snapshot 1`] = `
   <div
     class="container mx-auto"
   >
-    <div>
-      <div>
+    <div
+      class="min-h-96"
+    >
+      <div
+        class="mb-6"
+      >
         <h1
-          class="text-center text-4xl mb-6"
+          class="text-center text-4xl mb-4 min-h-8"
         >
           
     Populating Mesh

@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <div>
+    <div class="min-h-96">
       <OnboardingHeading
         title="Introduction"
         :description="`To get started with ${title}, we must first take a look at a few basic concepts.`"

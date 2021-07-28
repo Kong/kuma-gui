@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <div>
+    <div class="min-h-96">
       <div class="h-40">
         <h1 class="text-center text-4xl">
           Welcome to {{ title }}
@@ -38,7 +38,7 @@
       </div>
     </div>
     <OnboardingNavigation
-      getting-started
+      simple-view
       next-step="onboarding-introduction"
     />
   </div>

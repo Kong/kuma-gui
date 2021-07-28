@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <div>
+    <div class="min-h-96">
       <OnboardingHeading
         title="Adding new DPPs"
       />

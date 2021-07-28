@@ -1,9 +1,9 @@
 <template>
   <div class="container mx-auto">
-    <div>
+    <div class="min-h-96">
       <OnboardingHeading
-        title="Waiting for DPPs"
-        description="Now that we have deployed our first DPPs (data plane proxies), we need to wait for them to come online:"
+        :title="title"
+        :description="description"
       />
       <div class="md:w-4/5 lg:w-3/5 mx-auto">
         <div class="justify-center flex my-4">
@@ -17,8 +17,10 @@
 
           <div
             v-else
-            class="data-table-wrapper"
           >
+            <p class="text-sm font-bold tracking-wide">
+              Found {{ getDataplanesList.length }} DPPs, including:
+            </p>
             <KTable :options="tableData">
               <template
                 v-slot:status="{ rowValue }"
@@ -37,7 +39,7 @@
       </div>
     </div>
     <OnboardingNavigation
-      next-step="onboarding-adding-dpp-code"
+      next-step="onboarding-completed"
       previous-step="onboarding-adding-dpp-code"
       :should-display-next="getDataplanesList.length > 0"
     />
@@ -67,7 +69,21 @@ export default {
         ],
         data: this.getDataplanesList
       }
-    }
+    },
+    title() {
+      if (this.getDataplanesList.length) {
+        return 'Congratulations!'
+      }
+
+      return 'Waiting for DPPs'
+    },
+    description() {
+      if (this.getDataplanesList.length) {
+        return 'We have detected the following DPPs (dta plane proxies) connecting to this control plane'
+      }
+
+      return 'Now that we have deployed our first DPPs (data plane proxies), we need to wait for them to come online:'
+    },
   },
   watch: {
     getDataplanesList: debounce(function(val) {
@@ -84,20 +100,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-.data-table-wrapper {
-  overflow: hidden;
-  border: 1px solid var(--gray-4);
-  background: none;
-  border-radius: 4px;
-
-  .k-table thead {
-    background-color: var(--gray-5);
-    border-top: 0;
-  }
-
-}
-
-</style>

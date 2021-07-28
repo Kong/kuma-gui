@@ -5,13 +5,17 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
   <div
     class="container mx-auto"
   >
-    <div>
-      <div>
+    <div
+      class="min-h-96"
+    >
+      <div
+        class="mb-6"
+      >
         <h1
-          class="text-center text-4xl mb-6"
+          class="text-center text-4xl mb-4 min-h-8"
         >
           
-    Waiting for DPPs
+    Congratulations!
   
         </h1>
          
@@ -19,7 +23,7 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
           class="text-center"
         >
           
-    Now that we have deployed our first DPPs (data plane proxies), we need to wait for them to come online:
+    We have detected the following DPPs (dta plane proxies) connecting to this control plane
   
         </p>
       </div>
@@ -30,9 +34,15 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
         <div
           class="justify-center flex my-4"
         >
-          <div
-            class="data-table-wrapper"
-          >
+          <div>
+            <p
+              class="text-sm font-bold tracking-wide"
+            >
+              
+            Found 3 DPPs, including:
+          
+            </p>
+             
             <table
               class="k-table has-hover side-border"
               data-v-bfeabd48=""
