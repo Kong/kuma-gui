@@ -3,7 +3,7 @@
 exports[`DataplanesOverview.vue renders snapshot 1`] = `
 <div>
   <div
-    class="container mx-auto"
+    class="onboarding-container"
   >
     <div
       class="min-h-96"
@@ -28,9 +28,7 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
         </p>
       </div>
        
-      <div
-        class="md:w-4/5 lg:w-3/5 mx-auto"
-      >
+      <div>
         <div
           class="justify-center flex my-4"
         >

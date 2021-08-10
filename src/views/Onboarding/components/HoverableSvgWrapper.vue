@@ -1,13 +1,13 @@
 <template>
-  <div class="w-full relative">
+  <div class="w-full relative ">
     <transition
       leave-active-class="transition-opacity duration-300"
       leave-to-class="opacity-0"
     >
       <div
+        v-if="overlay"
         data-testid="hoverable-overlay"
         class="absolute bg-black bg-opacity-75 w-full h-full"
-        v-if="overlay"
         @mouseover="hideOverlay"
       >
         <span class="absolute right-0 text-white mr-4 mt-4">

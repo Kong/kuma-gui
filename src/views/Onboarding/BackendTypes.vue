@@ -1,44 +1,44 @@
 <template>
-  <div class="container mx-auto">
-    <div class="min-h-96">
+  <OnboardingPage>
+    <template #content>
       <OnboardingHeading
         title="Backend Types"
         :description="
-          `${title}, is a portable service mesh that can run on both Kubernetes, VMs or other containerized enviroments. You can also mix together different runtimes in a multi one deployment.`
+          `${title}, is a portable service mesh that can run on both Kubernetes, VMs or other containerized enviroments. You can also mix together different runtimes in a multi zone deployment.`
         "
       />
-      <div class="md:w-4/5 lg:w-3/5 mx-auto">
-        <HoverableSvgWrapper>
-          <component :is="currentGraph" />
-        </HoverableSvgWrapper>
-        <KRadio
-          v-model="mode"
-          name="deployment"
-          value="kubernetess"
-        >
-          Kubernetess
-        </KRadio>
-        <KRadio
-          v-model="mode"
-          name="deployment"
-          value="universal"
-        >
-          Universal
-        </KRadio>
-        <KRadio
-          v-model="mode"
-          name="deployment"
-          value="memory"
-        >
-          Memoty
-        </KRadio>
-      </div>
-    </div>
-    <OnboardingNavigation
-      next-step="onboarding-populating-mesh"
-      previous-step="onboarding-deployment-types"
-    />
-  </div>
+      <HoverableSvgWrapper>
+        <component :is="currentGraph" />
+      </HoverableSvgWrapper>
+      <KRadio
+        v-model="mode"
+        name="deployment"
+        value="kubernetess"
+      >
+        Kubernetess
+      </KRadio>
+      <KRadio
+        v-model="mode"
+        name="deployment"
+        value="universal"
+      >
+        Universal
+      </KRadio>
+      <KRadio
+        v-model="mode"
+        name="deployment"
+        value="memory"
+      >
+        Memory
+      </KRadio>
+    </template>
+    <template #navigation>
+      <OnboardingNavigation
+        next-step="onboarding-populating-mesh"
+        previous-step="onboarding-deployment-types"
+      />
+    </template>
+  </OnboardingPage>
 </template>
 
 <script>
@@ -48,6 +48,7 @@ import StandaloneDeploymentGraph from '@/views/Onboarding/components/StandaloneD
 import OnboardingNavigation from '@/views/Onboarding/components/OnboardingNavigation'
 import OnboardingHeading from '@/views/Onboarding/components/OnboardingHeading'
 import HoverableSvgWrapper from '@/views/Onboarding/components/HoverableSvgWrapper'
+import OnboardingPage from '@/views/Onboarding/components/OnboardingPage'
 
 export default {
   name: 'BackendTypes',
@@ -57,6 +58,7 @@ export default {
     OnboardingNavigation,
     OnboardingHeading,
     HoverableSvgWrapper,
+    OnboardingPage,
   },
   data() {
     return { mode: 'kubernetess' }
@@ -66,9 +68,7 @@ export default {
       title: 'config/getTagline',
     }),
     currentGraph() {
-      return this.mode === 'memory'
-        ? 'StandaloneDeploymentGraph'
-        : 'MultiZoneDeploymentGraph'
+      return this.mode === 'memory' ? 'StandaloneDeploymentGraph' : 'MultiZoneDeploymentGraph'
     },
   },
 }

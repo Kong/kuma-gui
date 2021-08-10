@@ -1,10 +1,8 @@
 <template>
-  <div class="container mx-auto">
-    <div class="min-h-96">
-      <OnboardingHeading
-        title="Adding new DPPs"
-      />
-      <div class="md:w-4/5 lg:w-3/5 mx-auto">
+  <OnboardingPage>
+    <template #content>
+      <OnboardingHeading title="Adding new DPPs" />
+      <div>
         <KRadio
           v-model="mode"
           name="deployment"
@@ -20,42 +18,46 @@
           Manually
         </KRadio>
       </div>
-    </div>
-    <OnboardingNavigation
-      next-step="onboarding-adding-dpp-code"
-      previous-step="onboarding-populating-mesh"
-    />
-  </div>
+    </template>
+    <template #navigation>
+      <OnboardingNavigation
+        next-step="onboarding-adding-dpp-code"
+        previous-step="onboarding-populating-mesh"
+      />
+    </template>
+  </OnboardingPage>
 </template>
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
 import OnboardingNavigation from '@/views/Onboarding/components/OnboardingNavigation'
 import OnboardingHeading from '@/views/Onboarding/components/OnboardingHeading'
+import OnboardingPage from '@/views/Onboarding/components/OnboardingPage'
 
 export default {
   name: 'AddingDataplanes',
   components: {
     OnboardingNavigation,
-    OnboardingHeading
+    OnboardingHeading,
+    OnboardingPage,
   },
   computed: {
     ...mapGetters({
       onboardingMode: 'onboarding/getMode',
     }),
     mode: {
-      get () {
+      get() {
         return this.onboardingMode
       },
-      set (value) {
+      set(value) {
         this.update(value)
-      }
-    }
+      },
+    },
   },
   methods: {
     ...mapMutations({
       update: 'onboarding/UPDATE_MODE',
     }),
-  }
+  },
 }
 </script>

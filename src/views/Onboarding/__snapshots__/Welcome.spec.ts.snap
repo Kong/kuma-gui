@@ -3,114 +3,110 @@
 exports[`Welcome.vue renders snapshot 1`] = `
 <div>
   <div
-    class="container mx-auto"
+    class="onboarding-container"
   >
     <div
       class="min-h-96"
     >
       <div
-        class="h-40"
+        class="mb-6"
       >
         <h1
-          class="text-center text-4xl"
+          class="text-center text-4xl mb-4 min-h-8"
         >
           
-        Welcome to Kuma
-      
+       Welcome to Kuma
+  
         </h1>
+         
+        <p
+          class="text-center"
+        >
+          
+    Congratulations for downloading Kuma! In just few steps your
+      service mesh will be fully online
+  
+        </p>
       </div>
        
       <div
-        class="md:w-4/5 lg:w-3/5 mx-auto"
+        class="md:w-2/3 mx-auto"
       >
         <p
-          class="my-4"
+          class="flex items-center mb-2"
         >
-          
-        Congratulations for downloading Kuma! In just few steps your
-        service mesh will be fully online
-      
+          <svg
+            class="kong-icon mr-2 kong-icon-check"
+            data-v-a7c9c1d2=""
+            height="14"
+            role="img"
+            viewBox="0 0 14 10"
+            width="14"
+          >
+            <title
+              data-v-a7c9c1d2=""
+            >
+              check
+            </title>
+            <g
+              data-v-a7c9c1d2=""
+            >
+              <path
+                clip-rule="evenodd"
+                d="M4.67966 6.86538L11.2261 0.318978C11.634 -0.0889488 12.2957 -0.0885802 12.6995 0.315182L12.7909 0.40662C13.1967 0.812454 13.1898 1.47741 12.7868 1.88043L5.41865 9.24853C5.01051 9.65667 4.34285 9.65072 3.9479 9.25578L0.728185 6.03606C0.324048 5.63192 0.327503 4.97325 0.731265 4.56949L0.822671 4.47805C1.2285 4.07222 1.89164 4.07735 2.29742 4.48313L4.67966 6.86538Z"
+                data-v-a7c9c1d2=""
+                fill="var(--logo-green)"
+                fill-rule="evenodd"
+              />
+            </g>
+          </svg>
+           
+          <span>
+            
+          Automatically detected running in  Standalone  deployment
+        
+          </span>
         </p>
          
-        <div
-          class="md:w-2/3 mx-auto"
+        <p
+          class="flex items-center mb-2"
         >
-          <p
-            class="flex items-center mb-2"
+          <svg
+            class="kong-icon mr-2 kong-icon-check"
+            data-v-a7c9c1d2=""
+            height="14"
+            role="img"
+            viewBox="0 0 14 10"
+            width="14"
           >
-            <svg
-              class="kong-icon mr-2 kong-icon-check"
+            <title
               data-v-a7c9c1d2=""
-              height="14"
-              role="img"
-              viewBox="0 0 14 10"
-              width="14"
             >
-              <title
+              check
+            </title>
+            <g
+              data-v-a7c9c1d2=""
+            >
+              <path
+                clip-rule="evenodd"
+                d="M4.67966 6.86538L11.2261 0.318978C11.634 -0.0889488 12.2957 -0.0885802 12.6995 0.315182L12.7909 0.40662C13.1967 0.812454 13.1898 1.47741 12.7868 1.88043L5.41865 9.24853C5.01051 9.65667 4.34285 9.65072 3.9479 9.25578L0.728185 6.03606C0.324048 5.63192 0.327503 4.97325 0.731265 4.56949L0.822671 4.47805C1.2285 4.07222 1.89164 4.07735 2.29742 4.48313L4.67966 6.86538Z"
                 data-v-a7c9c1d2=""
-              >
-                check
-              </title>
-              <g
-                data-v-a7c9c1d2=""
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M4.67966 6.86538L11.2261 0.318978C11.634 -0.0889488 12.2957 -0.0885802 12.6995 0.315182L12.7909 0.40662C13.1967 0.812454 13.1898 1.47741 12.7868 1.88043L5.41865 9.24853C5.01051 9.65667 4.34285 9.65072 3.9479 9.25578L0.728185 6.03606C0.324048 5.63192 0.327503 4.97325 0.731265 4.56949L0.822671 4.47805C1.2285 4.07222 1.89164 4.07735 2.29742 4.48313L4.67966 6.86538Z"
-                  data-v-a7c9c1d2=""
-                  fill="var(--logo-green)"
-                  fill-rule="evenodd"
-                />
-              </g>
-            </svg>
-             
-            <span>
-              
-            Automatically detected running in  Standalone  deployment
-          
-            </span>
-          </p>
+                fill="var(--logo-green)"
+                fill-rule="evenodd"
+              />
+            </g>
+          </svg>
            
-          <p
-            class="flex items-center mb-2"
-          >
-            <svg
-              class="kong-icon mr-2 kong-icon-check"
-              data-v-a7c9c1d2=""
-              height="14"
-              role="img"
-              viewBox="0 0 14 10"
-              width="14"
+          <span>
+            
+          Automatically detected running in 
+            <span
+              class="capitalize"
             >
-              <title
-                data-v-a7c9c1d2=""
-              >
-                check
-              </title>
-              <g
-                data-v-a7c9c1d2=""
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M4.67966 6.86538L11.2261 0.318978C11.634 -0.0889488 12.2957 -0.0885802 12.6995 0.315182L12.7909 0.40662C13.1967 0.812454 13.1898 1.47741 12.7868 1.88043L5.41865 9.24853C5.01051 9.65667 4.34285 9.65072 3.9479 9.25578L0.728185 6.03606C0.324048 5.63192 0.327503 4.97325 0.731265 4.56949L0.822671 4.47805C1.2285 4.07222 1.89164 4.07735 2.29742 4.48313L4.67966 6.86538Z"
-                  data-v-a7c9c1d2=""
-                  fill="var(--logo-green)"
-                  fill-rule="evenodd"
-                />
-              </g>
-            </svg>
-             
-            <span>
               
-            Automatically detected running in 
-              <span
-                class="capitalize"
-              >
-                
-              </span>
             </span>
-          </p>
-        </div>
+          </span>
+        </p>
       </div>
     </div>
      

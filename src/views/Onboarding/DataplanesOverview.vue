@@ -1,11 +1,11 @@
 <template>
-  <div class="container mx-auto">
-    <div class="min-h-96">
+  <OnboardingPage>
+    <template #content>
       <OnboardingHeading
         :title="title"
         :description="description"
       />
-      <div class="md:w-4/5 lg:w-3/5 mx-auto">
+      <div>
         <div class="justify-center flex my-4">
           <KIcon
             v-if="!getDataplanesList.length"
@@ -15,16 +15,12 @@
             size="42"
           />
 
-          <div
-            v-else
-          >
+          <div v-else>
             <p class="text-sm font-bold tracking-wide">
               Found {{ getDataplanesList.length }} DPPs, including:
             </p>
             <KTable :options="tableData">
-              <template
-                v-slot:status="{ rowValue }"
-              >
+              <template v-slot:status="{ rowValue }">
                 <div
                   class="entity-status"
                   :class="{ 'is-offline': (rowValue.toLowerCase() === 'offline' || rowValue === false) }"
@@ -37,13 +33,16 @@
           </div>
         </div>
       </div>
-    </div>
-    <OnboardingNavigation
-      next-step="onboarding-completed"
-      previous-step="onboarding-adding-dpp-code"
-      :should-display-next="getDataplanesList.length > 0"
-    />
-  </div>
+    </template>
+
+    <template #navigation>
+      <OnboardingNavigation
+        next-step="onboarding-completed"
+        previous-step="onboarding-adding-dpp-code"
+        :should-display-next="getDataplanesList.length > 0"
+      />
+    </template>
+  </OnboardingPage>
 </template>
 
 <script>
@@ -51,12 +50,14 @@ import { mapActions, mapGetters } from 'vuex'
 import debounce from 'lodash/debounce'
 import OnboardingNavigation from '@/views/Onboarding/components/OnboardingNavigation'
 import OnboardingHeading from '@/views/Onboarding/components/OnboardingHeading'
+import OnboardingPage from '@/views/Onboarding/components/OnboardingPage'
 
 export default {
   name: 'DataplanesOverview',
   components: {
     OnboardingNavigation,
-    OnboardingHeading
+    OnboardingHeading,
+    OnboardingPage,
   },
   computed: {
     ...mapGetters(['getDataplanesList']),
@@ -65,9 +66,9 @@ export default {
         headers: [
           { label: 'Status', key: 'status' },
           { label: 'Name', key: 'name' },
-          { label: 'Mesh', key: 'mesh' }
+          { label: 'Mesh', key: 'mesh' },
         ],
-        data: this.getDataplanesList
+        data: this.getDataplanesList,
       }
     },
     title() {
@@ -86,7 +87,7 @@ export default {
     },
   },
   watch: {
-    getDataplanesList: debounce(function(val) {
+    getDataplanesList: debounce(function (val) {
       if (!val.length) {
         this.getAllDataplanes({ size: 10 })
       }
@@ -97,6 +98,6 @@ export default {
   },
   methods: {
     ...mapActions(['getAllDataplanes']),
-  }
+  },
 }
 </script>

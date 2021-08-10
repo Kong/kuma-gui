@@ -3,7 +3,7 @@
 exports[`PopulatingMesh.vue renders snapshot 1`] = `
 <div>
   <div
-    class="container mx-auto"
+    class="onboarding-container"
   >
     <div
       class="min-h-96"
@@ -28,67 +28,65 @@ exports[`PopulatingMesh.vue renders snapshot 1`] = `
         </p>
       </div>
        
-      <div>
+      <div
+        class="flex justify-center"
+      >
         <div
-          class="flex justify-center"
+          class="w-full lg:w-3/5 py-4"
         >
-          <div
-            class="w-full lg:w-1/2 py-4"
+          <table
+            class="k-table has-hover is-small side-border"
+            data-v-bfeabd48=""
           >
-            <table
-              class="k-table has-hover is-small side-border"
+            <thead
               data-v-bfeabd48=""
             >
-              <thead
+              <tr
                 data-v-bfeabd48=""
               >
-                <tr
+                <th
+                  class=""
                   data-v-bfeabd48=""
                 >
-                  <th
-                    class=""
-                    data-v-bfeabd48=""
-                  >
-                     Name 
-                  </th>
-                  <th
-                    class=""
-                    data-v-bfeabd48=""
-                  >
-                     # of DPPs 
-                  </th>
-                </tr>
-              </thead>
-              <tbody
+                   Name 
+                </th>
+                <th
+                  class=""
+                  data-v-bfeabd48=""
+                >
+                   # of DPPs 
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              data-v-bfeabd48=""
+            >
+              <tr
                 data-v-bfeabd48=""
               >
-                <tr
+                <td
                   data-v-bfeabd48=""
                 >
-                  <td
-                    data-v-bfeabd48=""
-                  >
-                    default
-                  </td>
-                  <td
-                    data-v-bfeabd48=""
-                  >
-                    0
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+                  default
+                </td>
+                <td
+                  data-v-bfeabd48=""
+                >
+                  0
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-         
-        <p
-          class="text-center"
-        >
-          
-        By default, Kuma creates a "default" mesg that is ready to use, let's add some DPPs to it in the next step
-      
-        </p>
       </div>
+       
+      <p
+        class="text-center"
+      >
+        
+      By default, Kuma creates a "default" mesh that is ready to use, let's add some DPPs to it in the next step
+    
+      </p>
     </div>
      
     <div

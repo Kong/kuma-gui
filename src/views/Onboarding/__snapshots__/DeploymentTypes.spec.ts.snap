@@ -3,7 +3,7 @@
 exports[`DeploymentTypes.vue renders snapshot 1`] = `
 <div>
   <div
-    class="container mx-auto"
+    class="onboarding-container"
   >
     <div
       class="min-h-96"
@@ -29,152 +29,248 @@ exports[`DeploymentTypes.vue renders snapshot 1`] = `
       </div>
        
       <div
-        class="md:w-4/5 lg:w-3/5 mx-auto"
+        class="w-full relative "
       >
-        <div
-          class="w-full relative"
+        <transition-stub
+          leaveactiveclass="transition-opacity duration-300"
+          leavetoclass="opacity-0"
         >
-          <transition-stub
-            leaveactiveclass="transition-opacity duration-300"
-            leavetoclass="opacity-0"
+          <div
+            class="absolute bg-black bg-opacity-75 w-full h-full"
+            data-testid="hoverable-overlay"
           >
-            <div
-              class="absolute bg-black bg-opacity-75 w-full h-full"
-              data-testid="hoverable-overlay"
+            <span
+              class="absolute right-0 text-white mr-4 mt-4"
             >
-              <span
-                class="absolute right-0 text-white mr-4 mt-4"
-              >
-                
+              
         Mouse over the boxes
       
-              </span>
-            </div>
-          </transition-stub>
-           
+            </span>
+          </div>
+        </transition-stub>
+         
+        <div>
           <div>
-            <div>
-              <div
+            <div
+              data-v-3cb990b6=""
+            >
+              <span
                 data-v-3cb990b6=""
               >
-                <span
+                Standalone 1
+              </span>
+               
+              <transition-stub
+                data-v-3cb990b6=""
+                name="fade"
+              >
+                <div
+                  class="k-popover"
                   data-v-3cb990b6=""
+                  style="width: 200px; display: none;"
                 >
-                  Standalone 1
-                </span>
-                 
-                <transition-stub
-                  data-v-3cb990b6=""
-                  name="fade"
-                >
+                  <!---->
                   <div
-                    class="k-popover"
+                    class="k-popover-content"
                     data-v-3cb990b6=""
-                    style="width: 200px; display: none;"
                   >
-                    <!---->
-                    <div
-                      class="k-popover-content"
-                      data-v-3cb990b6=""
-                    >
-                      <div>
-                        <p>
-                          Text of Standalone 1
-                        </p>
-                      </div>
+                    <div>
+                      <p>
+                        Text of Standalone 1
+                      </p>
                     </div>
                   </div>
-                </transition-stub>
-              </div>
+                </div>
+              </transition-stub>
             </div>
+          </div>
+           
+          <svg
+            height="151px"
+            version="1.1"
+            viewBox="-0.5 -0.5 441 151"
+            width="441px"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <defs />
              
-            <svg
-              height="151px"
-              version="1.1"
-              viewBox="-0.5 -0.5 441 151"
-              width="441px"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <defs />
-               
-              <g>
+            <g>
+              <g
+                data-v-3cb990b6=""
+              >
                 <g
                   data-v-3cb990b6=""
                 >
-                  <g
+                  <rect
                     data-v-3cb990b6=""
+                    fill="#00cc00"
+                    height="60"
+                    pointer-events="all"
+                    stroke="#000000"
+                    width="120"
+                    x="160"
+                    y="0"
+                  />
+                   
+                  <text
+                    data-v-3cb990b6=""
+                    fill="#000000"
+                    font-family="Helvetica"
+                    font-size="12px"
+                    text-anchor="middle"
+                    x="220"
+                    y="34"
                   >
-                    <rect
-                      data-v-3cb990b6=""
-                      fill="#00cc00"
-                      height="60"
-                      pointer-events="all"
-                      stroke="#000000"
-                      width="120"
-                      x="160"
-                      y="0"
-                    />
-                     
-                    <text
-                      data-v-3cb990b6=""
-                      fill="#000000"
-                      font-family="Helvetica"
-                      font-size="12px"
-                      text-anchor="middle"
-                      x="220"
-                      y="34"
-                    >
-                      
+                    
             Kuma control plane
           
-                    </text>
-                  </g>
-                   
-                  <div
-                    data-v-3cb990b6=""
-                    name="fade"
-                  >
-                    <foreignobject
-                      data-v-3cb990b6=""
-                    >
-                      <div
-                        class="k-popover"
-                        data-v-3cb990b6=""
-                        style="width: 200px; display: none;"
-                      >
-                        <div
-                          class="k-popover-title"
-                          data-v-3cb990b6=""
-                        >
-                          Light
-                        </div>
-                        <div
-                          class="k-popover-content"
-                          data-v-3cb990b6=""
-                        >
-                          <div
-                            data-v-3cb990b6=""
-                          >
-                            <p
-                              data-v-3cb990b6=""
-                            >
-                              Text of Control Plane
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </foreignobject>
-                  </div>
+                  </text>
                 </g>
                  
+                <div
+                  data-v-3cb990b6=""
+                  name="fade"
+                >
+                  <foreignobject
+                    data-v-3cb990b6=""
+                  >
+                    <div
+                      class="k-popover"
+                      data-v-3cb990b6=""
+                      style="width: 200px; display: none;"
+                    >
+                      <div
+                        class="k-popover-title"
+                        data-v-3cb990b6=""
+                      >
+                        Light
+                      </div>
+                      <div
+                        class="k-popover-content"
+                        data-v-3cb990b6=""
+                      >
+                        <div
+                          data-v-3cb990b6=""
+                        >
+                          <p
+                            data-v-3cb990b6=""
+                          >
+                            Text of Control Plane
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </foreignobject>
+                </div>
+              </g>
+               
+              <rect
+                fill="#ffffff"
+                height="60"
+                pointer-events="all"
+                stroke="#000000"
+                width="120"
+                x="0"
+                y="90"
+              />
+               
+              <text
+                fill="#000000"
+                font-family="Helvetica"
+                font-size="12px"
+                text-anchor="middle"
+                x="40"
+                y="124"
+              >
+                
+        Service
+      
+              </text>
+               
+              <rect
+                fill="#ffffff"
+                height="60"
+                pointer-events="all"
+                stroke="#000000"
+                width="120"
+                x="320"
+                y="90"
+              />
+               
+              <text
+                fill="#000000"
+                font-family="Helvetica"
+                font-size="12px"
+                text-anchor="middle"
+                x="400"
+                y="124"
+              >
+                
+        Service
+      
+              </text>
+               
+              <g>
+                <path
+                  d="M 125.09 86.18 L 154.91 63.82"
+                  fill="none"
+                  pointer-events="stroke"
+                  stroke="#000000"
+                  stroke-miterlimit="10"
+                />
+                 
+                <path
+                  d="M 120.89 89.33 L 124.39 82.33 L 125.09 86.18 L 128.59 87.93 Z"
+                  fill="#000000"
+                  pointer-events="all"
+                  stroke="#000000"
+                  stroke-miterlimit="10"
+                />
+                 
+                <path
+                  d="M 159.11 60.67 L 155.61 67.67 L 154.91 63.82 L 151.41 62.07 Z"
+                  fill="#000000"
+                  pointer-events="all"
+                  stroke="#000000"
+                  stroke-miterlimit="10"
+                />
+              </g>
+               
+              <g>
+                <path
+                  d="M 314.91 86.18 L 285.09 63.82"
+                  fill="none"
+                  pointer-events="stroke"
+                  stroke="#000000"
+                  stroke-miterlimit="10"
+                />
+                 
+                <path
+                  d="M 319.11 89.33 L 311.41 87.93 L 314.91 86.18 L 315.61 82.33 Z"
+                  fill="#000000"
+                  pointer-events="all"
+                  stroke="#000000"
+                  stroke-miterlimit="10"
+                />
+                 
+                <path
+                  d="M 280.89 60.67 L 288.59 62.07 L 285.09 63.82 L 284.39 67.67 Z"
+                  fill="#000000"
+                  pointer-events="all"
+                  stroke="#000000"
+                  stroke-miterlimit="10"
+                />
+              </g>
+               
+              <g>
                 <rect
-                  fill="#ffffff"
+                  fill="#ff3333"
                   height="60"
                   pointer-events="all"
                   stroke="#000000"
-                  width="120"
-                  x="0"
+                  width="40"
+                  x="80"
                   y="90"
                 />
                  
@@ -183,20 +279,22 @@ exports[`DeploymentTypes.vue renders snapshot 1`] = `
                   font-family="Helvetica"
                   font-size="12px"
                   text-anchor="middle"
-                  x="40"
+                  x="100"
                   y="124"
                 >
                   
-        Service
-      
+          DPP
+        
                 </text>
-                 
+              </g>
+               
+              <g>
                 <rect
-                  fill="#ffffff"
+                  fill="#ff0000"
                   height="60"
                   pointer-events="all"
                   stroke="#000000"
-                  width="120"
+                  width="40"
                   x="320"
                   y="90"
                 />
@@ -206,162 +304,60 @@ exports[`DeploymentTypes.vue renders snapshot 1`] = `
                   font-family="Helvetica"
                   font-size="12px"
                   text-anchor="middle"
-                  x="400"
+                  x="340"
                   y="124"
                 >
                   
-        Service
-      
+          DPP
+        
                 </text>
-                 
-                <g>
-                  <path
-                    d="M 125.09 86.18 L 154.91 63.82"
-                    fill="none"
-                    pointer-events="stroke"
-                    stroke="#000000"
-                    stroke-miterlimit="10"
-                  />
-                   
-                  <path
-                    d="M 120.89 89.33 L 124.39 82.33 L 125.09 86.18 L 128.59 87.93 Z"
-                    fill="#000000"
-                    pointer-events="all"
-                    stroke="#000000"
-                    stroke-miterlimit="10"
-                  />
-                   
-                  <path
-                    d="M 159.11 60.67 L 155.61 67.67 L 154.91 63.82 L 151.41 62.07 Z"
-                    fill="#000000"
-                    pointer-events="all"
-                    stroke="#000000"
-                    stroke-miterlimit="10"
-                  />
-                </g>
-                 
-                <g>
-                  <path
-                    d="M 314.91 86.18 L 285.09 63.82"
-                    fill="none"
-                    pointer-events="stroke"
-                    stroke="#000000"
-                    stroke-miterlimit="10"
-                  />
-                   
-                  <path
-                    d="M 319.11 89.33 L 311.41 87.93 L 314.91 86.18 L 315.61 82.33 Z"
-                    fill="#000000"
-                    pointer-events="all"
-                    stroke="#000000"
-                    stroke-miterlimit="10"
-                  />
-                   
-                  <path
-                    d="M 280.89 60.67 L 288.59 62.07 L 285.09 63.82 L 284.39 67.67 Z"
-                    fill="#000000"
-                    pointer-events="all"
-                    stroke="#000000"
-                    stroke-miterlimit="10"
-                  />
-                </g>
-                 
-                <g>
-                  <rect
-                    fill="#ff3333"
-                    height="60"
-                    pointer-events="all"
-                    stroke="#000000"
-                    width="40"
-                    x="80"
-                    y="90"
-                  />
-                   
-                  <text
-                    fill="#000000"
-                    font-family="Helvetica"
-                    font-size="12px"
-                    text-anchor="middle"
-                    x="100"
-                    y="124"
-                  >
-                    
-          DPP
-        
-                  </text>
-                </g>
-                 
-                <g>
-                  <rect
-                    fill="#ff0000"
-                    height="60"
-                    pointer-events="all"
-                    stroke="#000000"
-                    width="40"
-                    x="320"
-                    y="90"
-                  />
-                   
-                  <text
-                    fill="#000000"
-                    font-family="Helvetica"
-                    font-size="12px"
-                    text-anchor="middle"
-                    x="340"
-                    y="124"
-                  >
-                    
-          DPP
-        
-                  </text>
-                </g>
               </g>
-            </svg>
-          </div>
+            </g>
+          </svg>
         </div>
-         
-        <label
-          class="k-radio d-inline-block"
-          data-v-b7148f78=""
-          name="mode"
-        >
-          <input
-            class="k-input float-left"
-            data-v-b7148f78=""
-            name="mode"
-            type="radio"
-          />
-          <span
-            class="float-left"
-            data-v-b7148f78=""
-          >
-            
-        Standalone Deployment
-      
-          </span>
-        </label>
-         
-        <label
-          class="k-radio d-inline-block"
-          data-v-b7148f78=""
-          name="mode"
-        >
-          <input
-            class="k-input float-left"
-            data-v-b7148f78=""
-            name="mode"
-            type="radio"
-          />
-          <span
-            class="float-left"
-            data-v-b7148f78=""
-          >
-            
-        Multi-Zone deployment
-      
-          </span>
-        </label>
       </div>
+       
+      <label
+        class="k-radio d-inline-block"
+        data-v-b7148f78=""
+        name="mode"
+      >
+        <input
+          class="k-input float-left"
+          data-v-b7148f78=""
+          name="mode"
+          type="radio"
+        />
+        <span
+          class="float-left"
+          data-v-b7148f78=""
+        >
+          
+      Standalone Deployment
+    
+        </span>
+      </label>
+       
+      <label
+        class="k-radio d-inline-block"
+        data-v-b7148f78=""
+        name="mode"
+      >
+        <input
+          class="k-input float-left"
+          data-v-b7148f78=""
+          name="mode"
+          type="radio"
+        />
+        <span
+          class="float-left"
+          data-v-b7148f78=""
+        >
+          
+      Multi-Zone deployment
+    
+        </span>
+      </label>
     </div>
      
     <div
