@@ -39,7 +39,7 @@
     </div>
     <OnboardingNavigation
       simple-view
-      next-step="onboarding-introduction"
+      next-step="onboarding-deployment-types"
     />
   </div>
 </template>

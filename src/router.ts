@@ -344,13 +344,13 @@ export default (store: Store<RootInterface>) => {
           component: () => import(/* webpackChunkName: "onboarding-welcome" */ '@/views/Onboarding/Welcome.vue')
         },
         {
-          path: 'introduction',
-          name: 'onboarding-introduction',
+          path: 'deployment-types',
+          name: 'onboarding-deployment-types',
           meta: {
             hideStatus: true,
             onboardingProcess: true
           },
-          component: () => import(/* webpackChunkName: "onboarding-introduction" */ '@/views/Onboarding/Introduction.vue')
+          component: () => import(/* webpackChunkName: "onboarding-deployment-types" */ '@/views/Onboarding/DeploymentTypes.vue')
         },
         {
           path: 'backend-types',

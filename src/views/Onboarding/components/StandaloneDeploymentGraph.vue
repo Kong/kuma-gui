@@ -19,7 +19,6 @@
       width="441px"
       height="151px"
       viewBox="-0.5 -0.5 441 151"
-      style="background-color: rgb(255, 255, 255);"
     >
       <defs />
       <g>

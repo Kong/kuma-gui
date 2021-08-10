@@ -11,7 +11,7 @@ import KIcon from '@kongponents/kicon'
 import KTable from '@kongponents/ktable'
 import KClipboardProvider from '@kongponents/kclipboardprovider'
 import Krumbs from '@kongponents/krumbs'
-import KRadio from '@kongponents/kradio/dist/KRadio.umd.min.js'
+import KRadio from '@kongponents/kradio'
 import KPop from '@kongponents/kpop'
 import KTabs from '@kongponents/ktabs'
 

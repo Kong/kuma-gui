@@ -3,10 +3,14 @@
     <div class="min-h-96">
       <OnboardingHeading
         title="Backend Types"
-        :description="`${title}, is a portable service mesh that can run on both Kubernetes, VMs or other containerized enviroments. You can also mix together different runtimes in a multi one deployment.`"
+        :description="
+          `${title}, is a portable service mesh that can run on both Kubernetes, VMs or other containerized enviroments. You can also mix together different runtimes in a multi one deployment.`
+        "
       />
       <div class="md:w-4/5 lg:w-3/5 mx-auto">
-        <component :is="currentGraph" />
+        <HoverableSvgWrapper>
+          <component :is="currentGraph" />
+        </HoverableSvgWrapper>
         <KRadio
           v-model="mode"
           name="deployment"
@@ -32,7 +36,7 @@
     </div>
     <OnboardingNavigation
       next-step="onboarding-populating-mesh"
-      previous-step="onboarding-introduction"
+      previous-step="onboarding-deployment-types"
     />
   </div>
 </template>
@@ -43,6 +47,7 @@ import MultiZoneDeploymentGraph from '@/views/Onboarding/components/MultiZoneDep
 import StandaloneDeploymentGraph from '@/views/Onboarding/components/StandaloneDeploymentGraph'
 import OnboardingNavigation from '@/views/Onboarding/components/OnboardingNavigation'
 import OnboardingHeading from '@/views/Onboarding/components/OnboardingHeading'
+import HoverableSvgWrapper from '@/views/Onboarding/components/HoverableSvgWrapper'
 
 export default {
   name: 'BackendTypes',
@@ -50,7 +55,8 @@ export default {
     MultiZoneDeploymentGraph,
     StandaloneDeploymentGraph,
     OnboardingNavigation,
-    OnboardingHeading
+    OnboardingHeading,
+    HoverableSvgWrapper,
   },
   data() {
     return { mode: 'kubernetess' }
@@ -60,9 +66,10 @@ export default {
       title: 'config/getTagline',
     }),
     currentGraph() {
-      return this.mode === 'memory' ? 'StandaloneDeploymentGraph' : 'MultiZoneDeploymentGraph'
-    }
-
+      return this.mode === 'memory'
+        ? 'StandaloneDeploymentGraph'
+        : 'MultiZoneDeploymentGraph'
+    },
   },
 }
 </script>
