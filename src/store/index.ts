@@ -34,7 +34,6 @@ export default (): Module<RootInterface, RootInterface> => ({
     totalDataplaneCount: 0,
 
     totalDataplaneList: [],
-    anyDataplanesOffline: null,
 
     version: '',
     itemQueryNamespace: 'item',
@@ -83,13 +82,11 @@ export default (): Module<RootInterface, RootInterface> => ({
     supportedVersionsFailed: '',
   } as TODO,
   getters: {
-    getOnboardingStatus: state => state.onboardingComplete,
     globalLoading: state => state.globalLoading,
     getSelectedMesh: state => state.selectedMesh,
     getMeshList: state => state.meshes,
     getDataplanes: state => state.dataplanes,
     getDataplanesList: state => state.totalDataplaneList,
-    getAnyDpOffline: state => state.anyDataplanesOffline,
 
     getItemQueryNamespace: state => state.itemQueryNamespace,
     getClusterCount: state => state.totalClusters,
@@ -121,7 +118,6 @@ export default (): Module<RootInterface, RootInterface> => ({
     SET_TOTAL_DATAPLANE_COUNT: (state, count) => (state.totalDataplaneCount = count),
     SET_TOTAL_DP_LIST: (state, dataplanes) => (state.totalDataplaneList = dataplanes),
     SET_TOTAL_CLUSTER_COUNT: (state, count) => (state.totalClusters = count),
-    SET_ANY_DP_OFFLINE: (state, status) => (state.anyDataplanesOffline = status),
 
     // NEW
     SET_INTERNAL_SERVICE_SUMMARY: (state, { data = [] } = {}) => {
@@ -199,11 +195,6 @@ export default (): Module<RootInterface, RootInterface> => ({
       }
 
       commit('SET_GLOBAL_LOADING', { globalLoading: false })
-    },
-
-    // update the onboarding state
-    updateOnboardingStatus({ commit }, status) {
-      commit('SET_ONBOARDING_STATUS', status)
     },
 
     // fetch all of the meshes from the Kuma
@@ -305,12 +296,6 @@ export default (): Module<RootInterface, RootInterface> => ({
 
             states.push(isOnline)
           }
-
-          // if any of the dataplanes return false for being online
-          // commit this so we can check against it
-          const anyDpOffline = states.some(i => i === false)
-
-          commit('SET_ANY_DP_OFFLINE', anyDpOffline)
 
           // commit the total list of dataplanes
           commit('SET_TOTAL_DP_LIST', result)

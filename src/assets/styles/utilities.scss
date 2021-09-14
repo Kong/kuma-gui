@@ -67,13 +67,6 @@
 
 /* New for Kuma */
 
-.arrow-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--blue-4);
-}
-
 .k-button {
   font-weight: normal !important;
   display: flex;
@@ -164,12 +157,4 @@
 }
 .h-screen {
   min-height: 100vh;
-}
-
-code {
-  // padding: 0.2rem 0.4rem;
-  // font-size: 90%;
-  // color: #bd4147;
-  // background-color: #f7f7f9;
-  // border-radius: 0.25rem;
 }
