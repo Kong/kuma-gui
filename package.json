@@ -31,7 +31,7 @@
     "@kongponents/ktable": "^4.0.2",
     "@kongponents/ktabs": "^4.0.2",
     "@kongponents/styles": "^4.0.2",
-    "axios": "^0.20.0",
+    "axios": "^0.21.2",
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
     "msw": "^0.30.1",
