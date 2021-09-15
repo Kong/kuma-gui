@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShellWithHeader.vue renders component with route 1`] = `
+<div>
+  <div>
+    <header
+      class="main-header px-4 py-1 flex justify-between items-center"
+    >
+      <div
+        class="py-1 md:py-0 flex justify-between items-center"
+      >
+        <a
+          aria-current="page"
+          class="logo router-link-exact-active router-link-active"
+          href="#/"
+        >
+          <img
+            alt="null Logo"
+            src="@/assets/images/product-logo.png?external"
+          />
+        </a>
+         
+        <div
+          class="my-0 mx-6 upgrade-check-wrapper"
+        >
+          <div
+            class="upgrade-check"
+          >
+            <!---->
+          </div>
+        </div>
+      </div>
+       
+      <div
+        class="flex justify-between items-center"
+      >
+        <div
+          class="k-alert py-1 success small"
+          data-v-14c8a976=""
+          role="alert"
+        >
+          <!---->
+          <!---->
+          <span
+            data-v-14c8a976=""
+          >
+            <div
+              class="alert-content flex items-center text-sm"
+              data-v-14c8a976=""
+            >
+              <div
+                class="mr-3"
+                data-v-14c8a976=""
+              >
+                
+        Do more with Kuma 
+                <span
+                  class="alert-content__arrow"
+                  data-v-14c8a976=""
+                >
+                  →
+                </span>
+              </div>
+               
+              <div
+                data-v-14c8a976=""
+              >
+                <a
+                  class="k-button no-underline success-button small primary"
+                  data-v-14c8a976=""
+                  data-v-38fa8ecf=""
+                  href="https://kuma.io/enterprise/?utm_source=Kuma&utm_medium=Kuma-GUI"
+                  target="_blank"
+                  type="button"
+                >
+                  
+          Enterprise
+        
+                </a>
+              </div>
+            </div>
+          </span>
+        </div>
+         
+        <!---->
+      </div>
+    </header>
+     
+    <div
+      class="main-content-container"
+    >
+      <div
+        class="main-content"
+      >
+        <transition-stub
+          mode="out-in"
+          name="fade"
+        >
+          <div>
+            
+  TestComponent
+
+          </div>
+        </transition-stub>
+      </div>
+    </div>
+  </div>
+</div>
+`;

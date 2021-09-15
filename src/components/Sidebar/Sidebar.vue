@@ -219,7 +219,7 @@ export default {
 #the-sidebar {
   position: fixed;
   z-index: 10;
-  top: var(--headerHeight);
+  top: var(--topbar-height);
   left: 0;
   display: flex;
   height: calc(100vh - 3rem);

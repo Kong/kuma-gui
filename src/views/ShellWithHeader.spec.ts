@@ -1,10 +1,10 @@
-import { render } from '@testing-library/vue'
+import renderWithVuex from '@/testUtils/renderWithVuex'
 import TestComponent from '@/testUtils/TestComponent.vue'
-import ShellEmpty from './ShellEmpty.vue'
+import ShellWithHeader from './ShellWithHeader.vue'
 
-describe('ShellEmpty.vue', () => {
+describe('ShellWithHeader.vue', () => {
   it('renders component with route', () => {
-    const { container } = render(ShellEmpty, {
+    const { container } = renderWithVuex(ShellWithHeader, {
       routes: [
         {
           path: '/',

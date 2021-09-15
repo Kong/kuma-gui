@@ -20,7 +20,7 @@ export default {
   padding: 0 2rem;
 
   @media screen and (min-width: 768px) {
-    max-width: 800px;
+    max-width: 1075px;
   }
 }
 </style>

@@ -393,7 +393,7 @@ export default (store: Store<RootInterface>) => {
       // Entity Wizard
       path: '/wizard',
       name: 'wizard',
-      component: () => import(/* webpackChunkName: "shell-empty" */ '@/views/ShellEmpty.vue'),
+      component: () => import(/* webpackChunkName: "shell-empty" */ '@/views/ShellWithHeader.vue'),
       children: [
         {
           path: 'mesh',

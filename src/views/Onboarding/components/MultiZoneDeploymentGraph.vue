@@ -5,9 +5,9 @@
       trigger="hover"
     >
       <span>Multizone 1</span>
-      <div slot="content">
+      <template #content>
         <p>Text of Multizone 1</p>
-      </div>
+      </template>
     </KPop>
 
     <KPop
@@ -15,15 +15,15 @@
       trigger="hover"
     >
       <span>Multizone 2</span>
-      <div slot="content">
+      <template #content>
         <p>Text of Multizone 2</p>
-      </div>
+      </template>
     </KPop>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'MultiZoneDeploymentGraph'
+  name: 'MultiZoneDeploymentGraph',
 }
 </script>

@@ -6,9 +6,10 @@
         trigger="hover"
       >
         <span>Standalone 1</span>
-        <div slot="content">
+
+        <template #content>
           <p>Text of Standalone 1</p>
-        </div>
+        </template>
       </KPop>
     </div>
 
@@ -50,9 +51,9 @@
             </text>
           </g>
 
-          <div slot="content">
+          <template #content>
             <p>Text of Control Plane</p>
-          </div>
+          </template>
         </KPop>
         <rect
           x="0"
@@ -188,7 +189,8 @@
           </text>
         </g>
 
-      </g></svg>
+      </g>
+    </svg>
   </div>
 </template>
 

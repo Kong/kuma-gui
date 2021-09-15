@@ -1,13 +1,8 @@
 <template>
   <div class="local-cps">
-    <page-header noflex>
-      <h2 class="type-xxl">
-        {{ pageTitle }}
-      </h2>
-    </page-header>
     <FrameSkeleton class="py-2 px-4">
       <KCard
-        v-if="isReady"
+        v-if="config"
         border-variant="noBorder"
       >
         <template v-slot:body>
@@ -41,7 +36,7 @@
 
       <!-- loading / error handling -->
       <KEmptyState
-        v-if="isLoading || hasError"
+        v-if="!config"
         cta-is-hidden
       >
         <template v-slot:title>
@@ -70,7 +65,6 @@
 import { mapGetters } from 'vuex'
 import Prism from 'vue-prismjs'
 
-import PageHeader from '@/components/Utils/PageHeader.vue'
 import FrameSkeleton from '@/components/Skeletons/FrameSkeleton'
 
 export default {
@@ -79,7 +73,6 @@ export default {
     title: 'Diagnostics',
   },
   components: {
-    PageHeader,
     FrameSkeleton,
     Prism,
   },
@@ -109,45 +102,10 @@ export default {
 
       return '#ccc'
     },
-    isReady() {
-      return !this.hasError && !this.isLoading
-    },
-    pageTitle() {
-      const metaTitle = this.$route.meta.title
-
-      return metaTitle
-    },
     codeOutput() {
       const code = this.config
 
       return JSON.stringify(code, null, 2)
-    },
-  },
-  beforeMount() {
-    this.fetchData()
-  },
-  methods: {
-    fetchData() {
-      // if the config isn't present, run
-      if (!this.config) {
-        // fetch the config
-        this.$store
-          .dispatch('getConfig')
-          .catch((error) => {
-            this.hasError = true
-
-            console.log(error)
-          })
-          .finally(() => {
-            setTimeout(() => {
-              this.isLoading = false
-            }, process.env.VUE_APP_DATA_TIMEOUT)
-          })
-      } else {
-        setTimeout(() => {
-          this.isLoading = false
-        }, process.env.VUE_APP_DATA_TIMEOUT)
-      }
     },
   },
 }

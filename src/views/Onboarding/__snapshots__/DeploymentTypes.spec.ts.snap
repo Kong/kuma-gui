@@ -59,7 +59,6 @@ exports[`DeploymentTypes.vue renders snapshot 1`] = `
               >
                 Standalone 1
               </span>
-               
               <transition-stub
                 data-v-3cb990b6=""
                 name="fade"
@@ -74,11 +73,9 @@ exports[`DeploymentTypes.vue renders snapshot 1`] = `
                     class="k-popover-content"
                     data-v-3cb990b6=""
                   >
-                    <div>
-                      <p>
-                        Text of Standalone 1
-                      </p>
-                    </div>
+                    <p>
+                      Text of Standalone 1
+                    </p>
                   </div>
                 </div>
               </transition-stub>
@@ -127,7 +124,6 @@ exports[`DeploymentTypes.vue renders snapshot 1`] = `
           
                   </text>
                 </g>
-                 
                 <div
                   data-v-3cb990b6=""
                   name="fade"
@@ -150,15 +146,11 @@ exports[`DeploymentTypes.vue renders snapshot 1`] = `
                         class="k-popover-content"
                         data-v-3cb990b6=""
                       >
-                        <div
+                        <p
                           data-v-3cb990b6=""
                         >
-                          <p
-                            data-v-3cb990b6=""
-                          >
-                            Text of Control Plane
-                          </p>
-                        </div>
+                          Text of Control Plane
+                        </p>
                       </div>
                     </div>
                   </foreignobject>

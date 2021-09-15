@@ -140,6 +140,12 @@ export default {
       return Boolean(this.env && this.apiUrl)
     },
   },
+  beforeCreate() {
+    document.body.style.paddingTop = 'var(--topbar-height)'
+  },
+  destroyed() {
+    document.body.style.paddingTop = ''
+  },
 }
 </script>
 
