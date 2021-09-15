@@ -1,10 +1,12 @@
 <template>
   <OnboardingPage>
-    <template #content>
+    <template #header>
       <OnboardingHeading
         :title="title"
         :description="description"
       />
+    </template>
+    <template #content>
       <div>
         <div class="justify-center flex my-4">
           <KIcon

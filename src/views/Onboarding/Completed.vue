@@ -1,10 +1,12 @@
 <template>
   <OnboardingPage>
-    <template #content>
+    <template #header>
       <OnboardingHeading
         title="Go to the dashboard"
         description="You have completed the initial wizard! You can now visualize the dashboard were you can find:"
       />
+    </template>
+    <template #content>
       <div>
         <div class="justify-between flex my-4">
           <div class="w-24 h-24 justify-center items-center flex border border-gray-500">
@@ -28,7 +30,6 @@
 
     <template #navigation>
       <OnboardingNavigation
-        hide-skip
         simple-view
         simple-view-next-button-text="View Dashboard"
         next-step="global-overview"

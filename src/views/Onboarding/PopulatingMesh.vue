@@ -1,10 +1,12 @@
 <template>
   <OnboardingPage>
-    <template #content>
+    <template #header>
       <OnboardingHeading
         title="Populating Mesh"
         :description="`${title} is a multi-tenat system that can support multiple service meshes in the same cluster`"
       />
+    </template>
+    <template #content>
       <div class="flex justify-center">
         <div class="w-full lg:w-3/5 py-4">
           <KTable

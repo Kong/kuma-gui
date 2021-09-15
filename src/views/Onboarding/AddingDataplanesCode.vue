@@ -1,7 +1,9 @@
 <template>
   <OnboardingPage>
-    <template #content>
+    <template #header>
       <OnboardingHeading title="Adding new DPPs" />
+    </template>
+    <template #content>
       <p
         v-if="isMultiZone"
         class="text-xs tracking-wider px-4 py-2 text-red-500"

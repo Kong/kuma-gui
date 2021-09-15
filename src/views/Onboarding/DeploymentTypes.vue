@@ -1,13 +1,14 @@
 <template>
   <OnboardingPage>
-    <template #content>
+    <template #header>
       <OnboardingHeading
         title="Deployment Types"
         :description="
           `To get started with ${title}, we must first take a look at a few basic concepts.`
         "
       />
-
+    </template>
+    <template #content>
       <HoverableSvgWrapper>
         <component :is="currentGraph" />
       </HoverableSvgWrapper>

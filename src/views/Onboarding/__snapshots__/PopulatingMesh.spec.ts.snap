@@ -6,13 +6,13 @@ exports[`PopulatingMesh.vue renders snapshot 1`] = `
     class="onboarding-container"
   >
     <div
-      class="min-h-96"
+      class="onboarding-container__header"
     >
       <div
-        class="mb-6"
+        class="relative"
       >
         <h1
-          class="text-center text-4xl mb-4 min-h-8"
+          class="onboarding-title"
         >
           
     Populating Mesh
@@ -20,14 +20,34 @@ exports[`PopulatingMesh.vue renders snapshot 1`] = `
         </h1>
          
         <p
-          class="text-center"
+          class="text-center text-lg mt-3"
         >
           
     Kuma is a multi-tenat system that can support multiple service meshes in the same cluster
   
         </p>
+         
+        <div
+          class="absolute right-0 top-0 mt-4 m-a flex items-center"
+        >
+          <a
+            aria-current="page"
+            class="k-button skip-button router-link-exact-active router-link-active small btn-link"
+            data-v-38fa8ecf=""
+            href="#/"
+            type="button"
+          >
+            
+      Skip Setup
+    
+          </a>
+        </div>
       </div>
-       
+    </div>
+     
+    <div
+      class="onboarding-container__content"
+    >
       <div
         class="flex justify-center"
       >
@@ -102,18 +122,6 @@ exports[`PopulatingMesh.vue renders snapshot 1`] = `
         >
           
       Back
-    
-        </a>
-         
-        <a
-          aria-current="page"
-          class="k-button skip-button router-link-exact-active router-link-active small btn-link"
-          data-v-38fa8ecf=""
-          href="#/"
-          type="button"
-        >
-          
-      or Skip
     
         </a>
       </div>

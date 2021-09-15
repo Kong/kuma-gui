@@ -1,7 +1,9 @@
 <template>
   <OnboardingPage>
-    <template #content>
+    <template #header>
       <OnboardingHeading title="Adding new DPPs" />
+    </template>
+    <template #content>
       <div>
         <KRadio
           v-model="mode"

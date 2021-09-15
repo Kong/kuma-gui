@@ -13,21 +13,6 @@
     >
       {{ simpleViewNextButtonText }}
     </KButton>
-    <KButton
-      v-if="!hideSkip"
-      class="skip-button"
-      appearance="btn-link"
-      size="small"
-      :to="{
-        name: 'global-overview',
-        params: {
-          mesh: 'all',
-        },
-      }"
-      @click.native="completeOnboarding"
-    >
-      or Skip
-    </KButton>
   </div>
 
   <div
@@ -44,20 +29,6 @@
         @click.native="changeStep(previousStep)"
       >
         Back
-      </KButton>
-      <KButton
-        class="skip-button"
-        appearance="btn-link"
-        size="small"
-        :to="{
-          name: 'global-overview',
-          params: {
-            mesh: 'all',
-          },
-        }"
-        @click.native="completeOnboarding"
-      >
-        or Skip
       </KButton>
     </div>
     <KButton
@@ -86,13 +57,9 @@ export default {
       type: String,
       default: ' Get Started',
     },
-    hideSkip: {
-      type: Boolean,
-      defalut: false,
-    },
     shouldDisplayNext: {
       type: Boolean,
-      default: true
+      default: true,
     },
     nextStep: {
       type: String,

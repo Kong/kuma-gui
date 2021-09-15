@@ -1,12 +1,14 @@
 <template>
   <OnboardingPage>
-    <template #content>
+    <template #header>
       <OnboardingHeading
         title="Backend Types"
         :description="
           `${title}, is a portable service mesh that can run on both Kubernetes, VMs or other containerized enviroments. You can also mix together different runtimes in a multi zone deployment.`
         "
       />
+    </template>
+    <template #content>
       <HoverableSvgWrapper>
         <component :is="currentGraph" />
       </HoverableSvgWrapper>

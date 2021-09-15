@@ -1,12 +1,13 @@
 <template>
   <OnboardingPage>
-    <template #content>
+    <template #header>
       <OnboardingHeading
-        :title="`   Welcome to ${title}`"
+        :title="`Welcome to ${title}`"
         :description="`Congratulations for downloading ${title}! In just few steps your
         service mesh will be fully online`"
       />
-
+    </template>
+    <template #content>
       <div class="md:w-2/3 mx-auto">
         <p class="flex items-center mb-2">
           <KIcon
