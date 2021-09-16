@@ -15,6 +15,9 @@ module.exports = {
       minHeight: theme => ({
         ...theme('spacing'),
       }),
+      cursor: {
+        help: 'help',
+      },
     },
   },
   future: {

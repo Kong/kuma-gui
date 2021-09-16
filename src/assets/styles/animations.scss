@@ -1,0 +1,30 @@
+
+.heartbeat {
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+  transform-box: fill-box;
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.95);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.97);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.90);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
