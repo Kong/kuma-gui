@@ -35,7 +35,6 @@
 
     <template #navigation>
       <OnboardingNavigation
-        simple-view
         next-step="onboarding-deployment-types"
       />
     </template>

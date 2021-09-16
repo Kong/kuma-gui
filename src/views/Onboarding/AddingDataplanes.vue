@@ -1,7 +1,7 @@
 <template>
   <OnboardingPage>
     <template #header>
-      <OnboardingHeading title="Adding new DPPs" />
+      <OnboardingHeading title="4. Adding New Services" />
     </template>
     <template #content>
       <div>

@@ -1,44 +1,42 @@
 <template>
-  <OnboardingPage>
+  <OnboardingPage with-image>
     <template #header>
-      <OnboardingHeading
-        title="Backend Types"
-        :description="
-          `${title}, is a portable service mesh that can run on both Kubernetes, VMs or other containerized enviroments. You can also mix together different runtimes in a multi zone deployment.`
-        "
-      />
+      <OnboardingHeading title="2. Choose Backend Types" />
     </template>
     <template #content>
-      <HoverableSvgWrapper>
+      <div class="h-full w-full flex items-center justify-center">
         <component :is="currentGraph" />
-      </HoverableSvgWrapper>
-      <KRadio
-        v-model="mode"
-        name="deployment"
-        value="kubernetess"
-      >
-        Kubernetess
-      </KRadio>
-      <KRadio
-        v-model="mode"
-        name="deployment"
-        value="universal"
-      >
-        Universal
-      </KRadio>
-      <KRadio
-        v-model="mode"
-        name="deployment"
-        value="memory"
-      >
-        Memory
-      </KRadio>
+      </div>
     </template>
     <template #navigation>
       <OnboardingNavigation
         next-step="onboarding-populating-mesh"
         previous-step="onboarding-deployment-types"
-      />
+      >
+        <template #selector>
+          <KRadio
+            v-model="mode"
+            name="deployment"
+            value="kubernetess"
+          >
+            Kubernetess
+          </KRadio>
+          <KRadio
+            v-model="mode"
+            name="deployment"
+            value="universal"
+          >
+            Universal
+          </KRadio>
+          <KRadio
+            v-model="mode"
+            name="deployment"
+            value="memory"
+          >
+            Memory
+          </KRadio>
+        </template>
+      </OnboardingNavigation>
     </template>
   </OnboardingPage>
 </template>

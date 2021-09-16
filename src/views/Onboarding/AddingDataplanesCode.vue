@@ -1,7 +1,10 @@
 <template>
   <OnboardingPage>
     <template #header>
-      <OnboardingHeading title="Adding new DPPs" />
+      <OnboardingHeading
+        title="4. Adding New Services"
+        description="To add data plane proxy manually, follow additional steps after this onboarding:"
+      />
     </template>
     <template #content>
       <p

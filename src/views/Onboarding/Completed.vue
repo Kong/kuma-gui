@@ -29,11 +29,7 @@
     </template>
 
     <template #navigation>
-      <OnboardingNavigation
-        simple-view
-        simple-view-next-button-text="View Dashboard"
-        next-step="global-overview"
-      />
+      <OnboardingNavigation next-step="global-overview" />
     </template>
   </OnboardingPage>
 </template>

@@ -85,7 +85,7 @@ export default {
         return 'We have detected the following DPPs (dta plane proxies) connecting to this control plane'
       }
 
-      return 'Now that we have deployed our first DPPs (data plane proxies), we need to wait for them to come online:'
+      return null
     },
   },
   watch: {

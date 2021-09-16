@@ -1,10 +1,7 @@
 <template>
   <OnboardingPage>
     <template #header>
-      <OnboardingHeading
-        title="Populating Mesh"
-        :description="`${title} is a multi-tenat system that can support multiple service meshes in the same cluster`"
-      />
+      <OnboardingHeading title="3. Populating a Mesh" />
     </template>
     <template #content>
       <div class="flex justify-center">

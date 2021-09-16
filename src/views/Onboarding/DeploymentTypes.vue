@@ -1,38 +1,41 @@
 <template>
-  <OnboardingPage>
+  <OnboardingPage with-image>
     <template #header>
       <OnboardingHeading
-        title="Deployment Types"
+        title="1. Choose Deployment Types"
         :description="
-          `To get started with ${title}, we must first take a look at a few basic concepts.`
+          `${title} is a multi-tenant system that can support multiple service meshes in the same cluster:`
         "
       />
     </template>
     <template #content>
-      <HoverableSvgWrapper>
+      <div class="h-full w-full flex items-center justify-center">
         <component :is="currentGraph" />
-      </HoverableSvgWrapper>
-      <KRadio
-        v-model="mode"
-        name="mode"
-        value="standalone"
-      >
-        Standalone Deployment
-      </KRadio>
-      <KRadio
-        v-model="mode"
-        name="mode"
-        value="multi-zone"
-      >
-        Multi-Zone deployment
-      </KRadio>
+      </div>
     </template>
 
     <template #navigation>
       <OnboardingNavigation
         next-step="onboarding-backend-types"
         previous-step="onboarding-welcome"
-      />
+      >
+        <template #selector>
+          <KRadio
+            v-model="mode"
+            name="mode"
+            value="standalone"
+          >
+            Standalone Deployment
+          </KRadio>
+          <KRadio
+            v-model="mode"
+            name="mode"
+            value="multi-zone"
+          >
+            Multi-Zone deployment
+          </KRadio>
+        </template>
+      </OnboardingNavigation>
     </template>
   </OnboardingPage>
 </template>
