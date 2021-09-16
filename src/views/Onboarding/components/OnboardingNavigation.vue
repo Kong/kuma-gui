@@ -1,38 +1,27 @@
 <template>
-  <div
-    v-if="simpleView"
-    class="mt-4 flex justify-center"
-  >
+  <div class="mt-4 flex justify-between items-center">
     <KButton
+      v-show="previousStep"
       class="mr-4"
-      appearance="primary"
+      appearance="secondary"
       :to="{
-        name: nextStep,
+        name: previousStep,
       }"
-      @click.native="changeStep(nextStep)"
+      @click.native="changeStep(previousStep)"
     >
-      {{ simpleViewNextButtonText }}
+      Back
     </KButton>
-  </div>
 
-  <div
-    v-else
-    class="mt-4 flex justify-between"
-  >
-    <div>
-      <KButton
-        class="mr-4"
-        appearance="secondary"
-        :to="{
-          name: previousStep,
-        }"
-        @click.native="changeStep(previousStep)"
-      >
-        Back
-      </KButton>
+    <div
+      v-if="$slots.selector"
+      class="radio flex justify-between w-3/5 md:w-1/2 lg:w-2/5"
+    >
+      <slot name="selector" />
     </div>
+
     <KButton
       v-if="shouldDisplayNext"
+      class="next-button"
       appearance="primary"
       :to="{
         name: nextStep,
@@ -49,14 +38,6 @@ import { mapActions } from 'vuex'
 export default {
   name: 'OnboardingNavigation',
   props: {
-    simpleView: {
-      type: Boolean,
-      defalut: false,
-    },
-    simpleViewNextButtonText: {
-      type: String,
-      default: ' Get Started',
-    },
     shouldDisplayNext: {
       type: Boolean,
       default: true,
@@ -67,7 +48,7 @@ export default {
     },
     previousStep: {
       type: String,
-      default: 'onboarding-welcome',
+      default: '',
     },
   },
   methods: {
@@ -77,7 +58,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.skip-button {
-  --KButtonBtnLink: #000000;
+.next-button {
+  --KButtonPrimaryBase: #5da46f;
+  --KButtonPrimaryHover: #5da46f;
+  --KButtonPrimaryActive: #5da46f;
+}
+
+.radio {
+  --KRadioPrimary: #5da46f;
+  color: #5da46f;
 }
 </style>
