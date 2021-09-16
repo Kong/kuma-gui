@@ -204,25 +204,25 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
     </div>
      
     <div
-      class="mt-4 flex justify-between"
+      class="mt-4 flex justify-between items-center"
     >
-      <div>
-        <a
-          aria-current="page"
-          class="k-button mr-4 router-link-exact-active router-link-active secondary"
-          data-v-38fa8ecf=""
-          href="#/"
-          type="button"
-        >
-          
-      Back
-    
-        </a>
-      </div>
+      <a
+        aria-current="page"
+        class="k-button mr-4 router-link-exact-active router-link-active secondary"
+        data-v-38fa8ecf=""
+        href="#/"
+        type="button"
+      >
+        
+    Back
+  
+      </a>
+       
+      <!---->
        
       <a
         aria-current="page"
-        class="k-button router-link-exact-active router-link-active primary"
+        class="k-button next-button router-link-exact-active router-link-active primary"
         data-v-38fa8ecf=""
         href="#/"
         type="button"

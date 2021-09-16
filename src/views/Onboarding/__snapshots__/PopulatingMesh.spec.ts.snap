@@ -15,17 +15,11 @@ exports[`PopulatingMesh.vue renders snapshot 1`] = `
           class="onboarding-title"
         >
           
-    Populating Mesh
+    3. Populating a Mesh
   
         </h1>
          
-        <p
-          class="text-center text-lg mt-3"
-        >
-          
-    Kuma is a multi-tenat system that can support multiple service meshes in the same cluster
-  
-        </p>
+        <!---->
          
         <div
           class="absolute right-0 top-0 mt-4 m-a flex items-center"
@@ -48,87 +42,89 @@ exports[`PopulatingMesh.vue renders snapshot 1`] = `
     <div
       class="onboarding-container__content"
     >
-      <div
-        class="flex justify-center"
-      >
+      <div>
         <div
-          class="w-full lg:w-3/5 py-4"
+          class="flex justify-center"
         >
-          <table
-            class="k-table has-hover is-small side-border"
-            data-v-bfeabd48=""
+          <div
+            class="w-full lg:w-3/5 py-4"
           >
-            <thead
+            <table
+              class="k-table has-hover is-small side-border"
               data-v-bfeabd48=""
             >
-              <tr
+              <thead
                 data-v-bfeabd48=""
               >
-                <th
-                  class=""
+                <tr
                   data-v-bfeabd48=""
                 >
-                   Name 
-                </th>
-                <th
-                  class=""
-                  data-v-bfeabd48=""
-                >
-                   # of DPPs 
-                </th>
-              </tr>
-            </thead>
-            <tbody
-              data-v-bfeabd48=""
-            >
-              <tr
+                  <th
+                    class=""
+                    data-v-bfeabd48=""
+                  >
+                     Name 
+                  </th>
+                  <th
+                    class=""
+                    data-v-bfeabd48=""
+                  >
+                     # of DPPs 
+                  </th>
+                </tr>
+              </thead>
+              <tbody
                 data-v-bfeabd48=""
               >
-                <td
+                <tr
                   data-v-bfeabd48=""
                 >
-                  default
-                </td>
-                <td
-                  data-v-bfeabd48=""
-                >
-                  0
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    default
+                  </td>
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    0
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+         
+        <p
+          class="text-center"
+        >
+          
+        By default, Kuma creates a "default" mesh that is ready to use, let's add some DPPs to it in the next step
+      
+        </p>
       </div>
-       
-      <p
-        class="text-center"
-      >
-        
-      By default, Kuma creates a "default" mesh that is ready to use, let's add some DPPs to it in the next step
-    
-      </p>
     </div>
      
     <div
-      class="mt-4 flex justify-between"
+      class="mt-4 flex justify-between items-center"
     >
-      <div>
-        <a
-          aria-current="page"
-          class="k-button mr-4 router-link-exact-active router-link-active secondary"
-          data-v-38fa8ecf=""
-          href="#/"
-          type="button"
-        >
-          
-      Back
-    
-        </a>
-      </div>
+      <a
+        aria-current="page"
+        class="k-button mr-4 router-link-exact-active router-link-active secondary"
+        data-v-38fa8ecf=""
+        href="#/"
+        type="button"
+      >
+        
+    Back
+  
+      </a>
+       
+      <!---->
        
       <a
         aria-current="page"
-        class="k-button router-link-exact-active router-link-active primary"
+        class="k-button next-button router-link-exact-active router-link-active primary"
         data-v-38fa8ecf=""
         href="#/"
         type="button"
