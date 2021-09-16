@@ -24,9 +24,9 @@
           <KRadio
             v-model="mode"
             name="deployment"
-            value="universal"
+            value="postgres"
           >
-            Universal
+            Postgres
           </KRadio>
           <KRadio
             v-model="mode"
@@ -43,8 +43,10 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import MultiZoneDeploymentGraph from '@/views/Onboarding/components/MultiZoneDeploymentGraph'
-import StandaloneDeploymentGraph from '@/views/Onboarding/components/StandaloneDeploymentGraph'
+
+import KubernetesGraph from '@/views/Onboarding/components/graphs/KubernetesGraph'
+import PostgresGraph from '@/views/Onboarding/components/graphs/PostgresGraph'
+import MemoryGraph from '@/views/Onboarding/components/graphs/MemoryGraph'
 import OnboardingNavigation from '@/views/Onboarding/components/OnboardingNavigation'
 import OnboardingHeading from '@/views/Onboarding/components/OnboardingHeading'
 import HoverableSvgWrapper from '@/views/Onboarding/components/HoverableSvgWrapper'
@@ -53,8 +55,9 @@ import OnboardingPage from '@/views/Onboarding/components/OnboardingPage'
 export default {
   name: 'BackendTypes',
   components: {
-    MultiZoneDeploymentGraph,
-    StandaloneDeploymentGraph,
+    KubernetesGraph,
+    PostgresGraph,
+    MemoryGraph,
     OnboardingNavigation,
     OnboardingHeading,
     HoverableSvgWrapper,
@@ -68,7 +71,16 @@ export default {
       title: 'config/getTagline',
     }),
     currentGraph() {
-      return this.mode === 'memory' ? 'StandaloneDeploymentGraph' : 'MultiZoneDeploymentGraph'
+      switch (this.mode) {
+        case 'kubernetess':
+          return 'KubernetesGraph'
+        case 'postgres':
+          return 'PostgresGraph'
+        case 'memory':
+          return 'MemoryGraph'
+        default:
+          return 'KubernetesGraph'
+      }
     },
   },
 }

@@ -14,7 +14,7 @@
       </main>
     </div>
 
-    <router-view />
+    <router-view v-else />
   </div>
 </template>
 

@@ -42,8 +42,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import MultiZoneDeploymentGraph from '@/views/Onboarding/components/MultiZoneDeploymentGraph'
-import StandaloneDeploymentGraph from '@/views/Onboarding/components/StandaloneDeploymentGraph'
+import MultizoneGraph from '@/views/Onboarding/components/graphs/MultizoneGraph'
+import StandaloneGraph from '@/views/Onboarding/components/graphs/StandaloneGraph'
 import OnboardingNavigation from '@/views/Onboarding/components/OnboardingNavigation'
 import OnboardingHeading from '@/views/Onboarding/components/OnboardingHeading'
 import HoverableSvgWrapper from '@/views/Onboarding/components/HoverableSvgWrapper'
@@ -52,8 +52,8 @@ import OnboardingPage from '@/views/Onboarding/components/OnboardingPage'
 export default {
   name: 'DeploymentTypes',
   components: {
-    MultiZoneDeploymentGraph,
-    StandaloneDeploymentGraph,
+    MultizoneGraph,
+    StandaloneGraph,
     OnboardingNavigation,
     OnboardingHeading,
     HoverableSvgWrapper,
@@ -69,7 +69,7 @@ export default {
       multicluster: 'config/getMulticlusterStatus',
     }),
     currentGraph() {
-      return this.mode === 'standalone' ? 'StandaloneDeploymentGraph' : 'MultiZoneDeploymentGraph'
+      return this.mode === 'standalone' ? 'StandaloneGraph' : 'MultizoneGraph'
     },
   },
   mounted() {

@@ -29,19 +29,15 @@ export default {
 
 <style lang="scss" scoped>
 .onboarding-container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
+  @apply w-full mx-auto my-0 px-4;
 
   &__header {
     @apply my-10;
   }
 
   &__content {
-    height: 1px;
-    width: 100%;
+    @apply h-px py-4 w-full bg-white;
     min-height: 450px;
-    background: #ffffff;
     box-shadow: 4px 4px 14px 4px rgba(103, 71, 128, 0.11);
 
     &--with-image {

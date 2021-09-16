@@ -96,19 +96,16 @@
       d="M224.396 260.071L142.797 260.071L142.797 251.783C142.797 248.967 145.081 246.683 147.897 246.683L219.296 246.683C222.113 246.683 224.396 248.967 224.396 251.783L224.396 260.071Z"
       fill="#7B2BBC"
     />
+
     <KPop
       trigger="hover"
       :is-svg="true"
       tag="g"
-      title="Title"
+      title="Kuma"
       placement="rightEnd"
       :popover-timeout="5"
     >
-      <g
-        class="heartbeat cursor-help"
-        :style="{ transformBox: 'fill-box;', transformOrigin: '50% 50%'}"
-      >
-
+      <g class="cursor-help animate-pulse">
         <g filter="url(#filter3_d)">
           <circle
             cx="487"
@@ -128,22 +125,23 @@
           d="M484.761 60.5791C484.761 59.0296 484.949 57.7956 485.325 56.877C485.701 55.9583 486.388 55.0563 487.384 54.1709C488.391 53.2744 489.061 52.5495 489.393 51.9961C489.725 51.4316 489.891 50.8395 489.891 50.2197C489.891 48.3493 489.027 47.4141 487.301 47.4141C486.482 47.4141 485.823 47.6686 485.325 48.1777C484.838 48.6758 484.584 49.3675 484.562 50.2529H479.747C479.769 48.139 480.45 46.4844 481.789 45.2891C483.139 44.0938 484.977 43.4961 487.301 43.4961C489.647 43.4961 491.468 44.0661 492.763 45.2061C494.058 46.335 494.705 47.9342 494.705 50.0039C494.705 50.9447 494.495 51.8356 494.074 52.6768C493.654 53.5068 492.918 54.431 491.866 55.4492L490.521 56.7275C489.68 57.5355 489.199 58.4818 489.077 59.5664L489.011 60.5791H484.761ZM484.279 65.6758C484.279 64.9342 484.528 64.3255 485.026 63.8496C485.535 63.3626 486.183 63.1191 486.969 63.1191C487.755 63.1191 488.396 63.3626 488.895 63.8496C489.404 64.3255 489.658 64.9342 489.658 65.6758C489.658 66.4062 489.409 67.0094 488.911 67.4854C488.424 67.9613 487.777 68.1992 486.969 68.1992C486.161 68.1992 485.508 67.9613 485.01 67.4854C484.523 67.0094 484.279 66.4062 484.279 65.6758Z"
           fill="#4A4622"
         />
-
       </g>
       <template v-slot:content>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, modi! Quis consectetur, esse ipsum ullam, eaque aspernatur hic vel veniam reprehenderit voluptates explicabo repellendus, error at. Non quod inventore pariatur.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, modi! Quis consectetur, esse ipsum ullam,
+        eaque aspernatur hic vel veniam reprehenderit voluptates explicabo repellendus, error at. Non quod inventore
+        pariatur.
       </template>
     </KPop>
 
     <KPop
       trigger="hover"
-      title="Title"
+      title="Service"
       :is-svg="true"
       tag="g"
       placement="rightEnd"
       :popover-timeout="5"
     >
-      <g class="cursor-help animate-pulse ">
+      <g class="cursor-help animate-pulse">
         <g filter="url(#filter4_d)">
           <circle
             cx="581"
@@ -163,10 +161,11 @@
           d="M578.761 234.579C578.761 233.03 578.949 231.796 579.325 230.877C579.701 229.958 580.388 229.056 581.384 228.171C582.391 227.274 583.061 226.549 583.393 225.996C583.725 225.432 583.891 224.84 583.891 224.22C583.891 222.349 583.027 221.414 581.301 221.414C580.482 221.414 579.823 221.669 579.325 222.178C578.838 222.676 578.584 223.368 578.562 224.253H573.747C573.769 222.139 574.45 220.484 575.789 219.289C577.139 218.094 578.977 217.496 581.301 217.496C583.647 217.496 585.468 218.066 586.763 219.206C588.058 220.335 588.705 221.934 588.705 224.004C588.705 224.945 588.495 225.836 588.074 226.677C587.654 227.507 586.918 228.431 585.866 229.449L584.521 230.728C583.68 231.535 583.199 232.482 583.077 233.566L583.011 234.579H578.761ZM578.279 239.676C578.279 238.934 578.528 238.326 579.026 237.85C579.535 237.363 580.183 237.119 580.969 237.119C581.755 237.119 582.396 237.363 582.895 237.85C583.404 238.326 583.658 238.934 583.658 239.676C583.658 240.406 583.409 241.009 582.911 241.485C582.424 241.961 581.777 242.199 580.969 242.199C580.161 242.199 579.508 241.961 579.01 241.485C578.523 241.009 578.279 240.406 578.279 239.676Z"
           fill="#4A4622"
         />
-
       </g>
       <template v-slot:content>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, modi! Quis consectetur, esse ipsum ullam, eaque aspernatur hic vel veniam reprehenderit voluptates explicabo repellendus, error at. Non quod inventore pariatur.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, modi! Quis consectetur, esse ipsum ullam,
+        eaque aspernatur hic vel veniam reprehenderit voluptates explicabo repellendus, error at. Non quod inventore
+        pariatur.
       </template>
     </KPop>
 
@@ -435,8 +434,6 @@
 
 <script>
 export default {
-  name: 'StandaloneDeploymentGraph',
+  name: 'StandaloneGraph',
 }
 </script>
-
-<style></style>
