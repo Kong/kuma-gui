@@ -1,5 +1,6 @@
 <template>
   <svg
+    data-testid="multizone-graph"
     width="906"
     height="456"
     viewBox="0 0 906 456"

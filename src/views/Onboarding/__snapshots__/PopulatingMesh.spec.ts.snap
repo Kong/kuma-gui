@@ -24,17 +24,15 @@ exports[`PopulatingMesh.vue renders snapshot 1`] = `
         <div
           class="absolute right-0 top-0 mt-4 m-a flex items-center"
         >
-          <a
-            aria-current="page"
-            class="k-button skip-button router-link-exact-active router-link-active small btn-link"
+          <button
+            class="k-button skip-button small btn-link"
             data-v-38fa8ecf=""
-            href="#/"
             type="button"
           >
             
       Skip Setup
     
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -42,12 +40,22 @@ exports[`PopulatingMesh.vue renders snapshot 1`] = `
     <div
       class="onboarding-container__content"
     >
-      <div>
+      <div
+        class="w-full"
+      >
+        <p
+          class="text-center"
+        >
+          
+      Kuma is a multi-tenant system that can support multiple service meshes in the same cluster:
+    
+        </p>
+         
         <div
-          class="flex justify-center"
+          class="flex justify-center mt-10 mb-16 pb-16"
         >
           <div
-            class="w-full lg:w-3/5 py-4"
+            class="w-full sm:w-3/5 lg:w-2/5 p-4"
           >
             <table
               class="k-table has-hover is-small side-border"
@@ -69,7 +77,13 @@ exports[`PopulatingMesh.vue renders snapshot 1`] = `
                     class=""
                     data-v-bfeabd48=""
                   >
-                     # of DPPs 
+                     Services 
+                  </th>
+                  <th
+                    class=""
+                    data-v-bfeabd48=""
+                  >
+                     DPPs 
                   </th>
                 </tr>
               </thead>
@@ -89,6 +103,11 @@ exports[`PopulatingMesh.vue renders snapshot 1`] = `
                   >
                     0
                   </td>
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    0
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -99,18 +118,18 @@ exports[`PopulatingMesh.vue renders snapshot 1`] = `
           class="text-center"
         >
           
-        By default, Kuma creates a "default" mesh that is ready to use, let's add some DPPs to it in the next step
-      
+      Kuma automatically creates a “default” mesh that’s ready-to-use. Let’s add services next.
+    
         </p>
       </div>
     </div>
      
     <div
-      class="mt-4 flex justify-between items-center"
+      class="mt-10 flex items-center flex-col sm:flex-row justify-between"
     >
       <a
         aria-current="page"
-        class="k-button mr-4 router-link-exact-active router-link-active secondary"
+        class="k-button navigation-button navigation-button--back router-link-exact-active router-link-active primary"
         data-v-38fa8ecf=""
         href="#/"
         type="button"
@@ -124,7 +143,7 @@ exports[`PopulatingMesh.vue renders snapshot 1`] = `
        
       <a
         aria-current="page"
-        class="k-button next-button router-link-exact-active router-link-active primary"
+        class="k-button navigation-button navigation-button--next router-link-exact-active router-link-active primary"
         data-v-38fa8ecf=""
         href="#/"
         type="button"

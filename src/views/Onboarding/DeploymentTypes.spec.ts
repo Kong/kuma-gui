@@ -19,7 +19,7 @@ describe('DeploymentTypes.vue', () => {
 
     await userEvent.click(screen.getByText(/Multi-Zone deployment/))
 
-    expect(screen.getByTestId('multizone-deployment-graph')).toBeInTheDocument()
+    expect(screen.getByTestId('multizone-graph')).toBeInTheDocument()
   })
 
   xit('hoverable section disappear on hover', async () => {

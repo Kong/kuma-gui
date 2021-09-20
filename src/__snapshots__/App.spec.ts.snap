@@ -184,8 +184,6 @@ exports[`App.vue fails to renders basic view 1`] = `
         </div>
       </main>
     </div>
-     
-    <!---->
   </div>
 </div>
 `;

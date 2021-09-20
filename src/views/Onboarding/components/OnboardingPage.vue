@@ -4,7 +4,9 @@
       <slot name="header" />
     </div>
     <div :class="classes">
-      <slot name="content" />
+      <div class="w-full">
+        <slot name="content" />
+      </div>
     </div>
     <slot name="navigation" />
   </div>
@@ -36,9 +38,12 @@ export default {
   }
 
   &__content {
-    @apply h-px py-4 w-full bg-white;
-    min-height: 450px;
+    // @apply h-px p-10 w-full bg-white text-lg; (option with strict height TODO check which option)
+    @apply flex items-center justify-center p-10 w-full bg-white text-lg;
+    min-height: 500px;
     box-shadow: 4px 4px 14px 4px rgba(103, 71, 128, 0.11);
+
+    --KTableHeaderSize: 18px;
 
     &--with-image {
       background: #f6f8fd;

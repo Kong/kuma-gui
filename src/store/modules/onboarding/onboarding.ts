@@ -16,6 +16,12 @@ const mutations: MutationTree<OnboardingInterface> = {
 
 const getters: GetterTree<OnboardingInterface, RootInterface> = {
   getMode: state => state.mode,
+  showOnboarding: (state, getters, { meshes, totalDataplaneCount }) => {
+    const onlyDefaultMesh = meshes.total === 1 && meshes.items[0].name === 'default'
+    const noDataplane = totalDataplaneCount === 0
+
+    return noDataplane && onlyDefaultMesh
+  },
 }
 
 const actions: ActionTree<OnboardingInterface, RootInterface> = {

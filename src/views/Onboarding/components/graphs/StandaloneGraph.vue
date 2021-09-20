@@ -1,6 +1,6 @@
 <template>
   <svg
-    data-testid="standalone-deployment-graph"
+    data-testid="standalone-graph"
     width="721"
     height="351"
     viewBox="0 0 721 351"

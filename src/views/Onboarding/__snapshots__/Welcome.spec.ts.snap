@@ -31,17 +31,15 @@ exports[`Welcome.vue renders snapshot 1`] = `
         <div
           class="absolute right-0 top-0 mt-4 m-a flex items-center"
         >
-          <a
-            aria-current="page"
-            class="k-button skip-button router-link-exact-active router-link-active small btn-link"
+          <button
+            class="k-button skip-button small btn-link"
             data-v-38fa8ecf=""
-            href="#/"
             type="button"
           >
             
       Skip Setup
     
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -50,92 +48,96 @@ exports[`Welcome.vue renders snapshot 1`] = `
       class="onboarding-container__content"
     >
       <div
-        class="md:w-2/3 mx-auto"
+        class="w-full"
       >
-        <p
-          class="flex items-center mb-2"
+        <div
+          class="md:w-2/3 mx-auto"
         >
-          <svg
-            class="kong-icon mr-2 kong-icon-check"
-            data-v-a7c9c1d2=""
-            height="14"
-            role="img"
-            viewBox="0 0 14 10"
-            width="14"
+          <p
+            class="flex items-center mb-2"
           >
-            <title
+            <svg
+              class="kong-icon mr-2 kong-icon-check"
               data-v-a7c9c1d2=""
+              height="14"
+              role="img"
+              viewBox="0 0 14 10"
+              width="14"
             >
-              check
-            </title>
-            <g
-              data-v-a7c9c1d2=""
-            >
-              <path
-                clip-rule="evenodd"
-                d="M4.67966 6.86538L11.2261 0.318978C11.634 -0.0889488 12.2957 -0.0885802 12.6995 0.315182L12.7909 0.40662C13.1967 0.812454 13.1898 1.47741 12.7868 1.88043L5.41865 9.24853C5.01051 9.65667 4.34285 9.65072 3.9479 9.25578L0.728185 6.03606C0.324048 5.63192 0.327503 4.97325 0.731265 4.56949L0.822671 4.47805C1.2285 4.07222 1.89164 4.07735 2.29742 4.48313L4.67966 6.86538Z"
+              <title
                 data-v-a7c9c1d2=""
-                fill="var(--logo-green)"
-                fill-rule="evenodd"
-              />
-            </g>
-          </svg>
-           
-          <span>
-            
+              >
+                check
+              </title>
+              <g
+                data-v-a7c9c1d2=""
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.67966 6.86538L11.2261 0.318978C11.634 -0.0889488 12.2957 -0.0885802 12.6995 0.315182L12.7909 0.40662C13.1967 0.812454 13.1898 1.47741 12.7868 1.88043L5.41865 9.24853C5.01051 9.65667 4.34285 9.65072 3.9479 9.25578L0.728185 6.03606C0.324048 5.63192 0.327503 4.97325 0.731265 4.56949L0.822671 4.47805C1.2285 4.07222 1.89164 4.07735 2.29742 4.48313L4.67966 6.86538Z"
+                  data-v-a7c9c1d2=""
+                  fill="var(--logo-green)"
+                  fill-rule="evenodd"
+                />
+              </g>
+            </svg>
+             
+            <span>
+              
           Automatically detected running in  Standalone  deployment
         
-          </span>
-        </p>
-         
-        <p
-          class="flex items-center mb-2"
-        >
-          <svg
-            class="kong-icon mr-2 kong-icon-check"
-            data-v-a7c9c1d2=""
-            height="14"
-            role="img"
-            viewBox="0 0 14 10"
-            width="14"
-          >
-            <title
-              data-v-a7c9c1d2=""
-            >
-              check
-            </title>
-            <g
-              data-v-a7c9c1d2=""
-            >
-              <path
-                clip-rule="evenodd"
-                d="M4.67966 6.86538L11.2261 0.318978C11.634 -0.0889488 12.2957 -0.0885802 12.6995 0.315182L12.7909 0.40662C13.1967 0.812454 13.1898 1.47741 12.7868 1.88043L5.41865 9.24853C5.01051 9.65667 4.34285 9.65072 3.9479 9.25578L0.728185 6.03606C0.324048 5.63192 0.327503 4.97325 0.731265 4.56949L0.822671 4.47805C1.2285 4.07222 1.89164 4.07735 2.29742 4.48313L4.67966 6.86538Z"
-                data-v-a7c9c1d2=""
-                fill="var(--logo-green)"
-                fill-rule="evenodd"
-              />
-            </g>
-          </svg>
-           
-          <span>
-            
-          Automatically detected running in 
-            <span
-              class="capitalize"
-            >
-              
             </span>
-          </span>
-        </p>
+          </p>
+           
+          <p
+            class="flex items-center mb-2"
+          >
+            <svg
+              class="kong-icon mr-2 kong-icon-check"
+              data-v-a7c9c1d2=""
+              height="14"
+              role="img"
+              viewBox="0 0 14 10"
+              width="14"
+            >
+              <title
+                data-v-a7c9c1d2=""
+              >
+                check
+              </title>
+              <g
+                data-v-a7c9c1d2=""
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.67966 6.86538L11.2261 0.318978C11.634 -0.0889488 12.2957 -0.0885802 12.6995 0.315182L12.7909 0.40662C13.1967 0.812454 13.1898 1.47741 12.7868 1.88043L5.41865 9.24853C5.01051 9.65667 4.34285 9.65072 3.9479 9.25578L0.728185 6.03606C0.324048 5.63192 0.327503 4.97325 0.731265 4.56949L0.822671 4.47805C1.2285 4.07222 1.89164 4.07735 2.29742 4.48313L4.67966 6.86538Z"
+                  data-v-a7c9c1d2=""
+                  fill="var(--logo-green)"
+                  fill-rule="evenodd"
+                />
+              </g>
+            </svg>
+             
+            <span>
+              
+          Automatically detected running in 
+              <span
+                class="capitalize"
+              >
+                
+              </span>
+            </span>
+          </p>
+        </div>
       </div>
     </div>
      
     <div
-      class="mt-4 flex justify-between items-center"
+      class="mt-10 flex items-center flex-col sm:flex-row justify-end"
     >
       <a
         aria-current="page"
-        class="k-button mr-4 router-link-exact-active router-link-active secondary"
+        class="k-button navigation-button navigation-button--back router-link-exact-active router-link-active primary"
         data-v-38fa8ecf=""
         href="#/"
         style="display: none;"
@@ -150,7 +152,7 @@ exports[`Welcome.vue renders snapshot 1`] = `
        
       <a
         aria-current="page"
-        class="k-button next-button router-link-exact-active router-link-active primary"
+        class="k-button navigation-button navigation-button--next router-link-exact-active router-link-active primary"
         data-v-38fa8ecf=""
         href="#/"
         type="button"

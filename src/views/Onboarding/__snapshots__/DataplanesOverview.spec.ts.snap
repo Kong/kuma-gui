@@ -30,17 +30,15 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
         <div
           class="absolute right-0 top-0 mt-4 m-a flex items-center"
         >
-          <a
-            aria-current="page"
-            class="k-button skip-button router-link-exact-active router-link-active small btn-link"
+          <button
+            class="k-button skip-button small btn-link"
             data-v-38fa8ecf=""
-            href="#/"
             type="button"
           >
             
       Skip Setup
     
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -48,21 +46,23 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
     <div
       class="onboarding-container__content"
     >
-      <div>
+      <div
+        class="w-full"
+      >
         <div
           class="justify-center flex my-4"
         >
           <div>
             <p
-              class="text-sm font-bold tracking-wide"
+              class="font-bold mb-4"
             >
               
-            Found 3 DPPs, including:
-          
+          Found 3 DPPs, including:
+        
             </p>
              
             <table
-              class="k-table has-hover side-border"
+              class="k-table has-hover is-small side-border"
               data-v-bfeabd48=""
             >
               <thead
@@ -75,7 +75,7 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
                     class=""
                     data-v-bfeabd48=""
                   >
-                     Status 
+                     Mesh 
                   </th>
                   <th
                     class=""
@@ -87,7 +87,7 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
                     class=""
                     data-v-bfeabd48=""
                   >
-                     Mesh 
+                     Status 
                   </th>
                 </tr>
               </thead>
@@ -100,22 +100,7 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
                   <td
                     data-v-bfeabd48=""
                   >
-                    <div
-                      class="entity-status"
-                      data-v-bfeabd48=""
-                    >
-                      <span
-                        class="entity-status__dot"
-                        data-v-bfeabd48=""
-                      />
-                       
-                      <span
-                        class="entity-status__label"
-                        data-v-bfeabd48=""
-                      >
-                        Online
-                      </span>
-                    </div>
+                    default
                   </td>
                   <td
                     data-v-bfeabd48=""
@@ -125,12 +110,37 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
                   <td
                     data-v-bfeabd48=""
                   >
-                    default
+                    <div
+                      class="entity-status"
+                      data-v-bfeabd48=""
+                    >
+                      <span
+                        class="entity-status__dot"
+                        data-v-bfeabd48=""
+                      />
+                       
+                      <span
+                        class="entity-status__label"
+                        data-v-bfeabd48=""
+                      >
+                        Online
+                      </span>
+                    </div>
                   </td>
                 </tr>
                 <tr
                   data-v-bfeabd48=""
                 >
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    default
+                  </td>
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    ingress-dp-test-123
+                  </td>
                   <td
                     data-v-bfeabd48=""
                   >
@@ -151,20 +161,20 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
                       </span>
                     </div>
                   </td>
-                  <td
-                    data-v-bfeabd48=""
-                  >
-                    ingress-dp-test-123
-                  </td>
+                </tr>
+                <tr
+                  data-v-bfeabd48=""
+                >
                   <td
                     data-v-bfeabd48=""
                   >
                     default
                   </td>
-                </tr>
-                <tr
-                  data-v-bfeabd48=""
-                >
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    no-subscriptions
+                  </td>
                   <td
                     data-v-bfeabd48=""
                   >
@@ -185,16 +195,6 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
                       </span>
                     </div>
                   </td>
-                  <td
-                    data-v-bfeabd48=""
-                  >
-                    no-subscriptions
-                  </td>
-                  <td
-                    data-v-bfeabd48=""
-                  >
-                    default
-                  </td>
                 </tr>
               </tbody>
             </table>
@@ -204,11 +204,11 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
     </div>
      
     <div
-      class="mt-4 flex justify-between items-center"
+      class="mt-10 flex items-center flex-col sm:flex-row justify-between"
     >
       <a
         aria-current="page"
-        class="k-button mr-4 router-link-exact-active router-link-active secondary"
+        class="k-button navigation-button navigation-button--back router-link-exact-active router-link-active primary"
         data-v-38fa8ecf=""
         href="#/"
         type="button"
@@ -222,7 +222,7 @@ exports[`DataplanesOverview.vue renders snapshot 1`] = `
        
       <a
         aria-current="page"
-        class="k-button next-button router-link-exact-active router-link-active primary"
+        class="k-button navigation-button navigation-button--next router-link-exact-active router-link-active primary"
         data-v-38fa8ecf=""
         href="#/"
         type="button"

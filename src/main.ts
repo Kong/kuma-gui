@@ -30,7 +30,6 @@ import '@/assets/styles/typography.scss'
 import '@/assets/styles/inputs.scss'
 import '@/assets/styles/components.scss'
 import '@/assets/styles/transitions.scss'
-import '@/assets/styles/animations.scss'
 
 /** Initiate Datadog */
 

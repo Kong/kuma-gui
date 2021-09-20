@@ -4,22 +4,37 @@
       <OnboardingHeading title="4. Adding New Services" />
     </template>
     <template #content>
-      <div class="h-full w-full flex justify-center items-center">
-        <DemoOption
-          class="mr-24"
-          type="demo"
+      <div class="h-full w-full flex justify-evenly items-center">
+        <Box
           :active="mode === 'demo'"
-          title="Demo app"
-          sub-title="Pre-Configured"
+          class="cursor-pointer"
           @clicked="update('demo')"
-        />
-        <DemoOption
-          type="manually"
+        >
+          <div>
+            <img src="@/assets/images/new-service-demo.svg?external">
+            <div class="ml-3">
+              <p class="uppercase font-bold tracking-wider">
+                Demo app
+              </p>
+              <p>Pre-Configured</p>
+            </div>
+          </div>
+        </Box>
+        <Box
           :active="mode === 'manually'"
-          title="Manually"
-          sub-title="Custom Config"
+          class="cursor-pointer"
           @clicked="update('manually')"
-        />
+        >
+          <div class="cursor-pointer">
+            <img src="@/assets/images/new-service-manually.svg?external">
+            <div class="ml-3">
+              <p class="uppercase font-bold tracking-wider">
+                Manually
+              </p>
+              <p>Custom Config</p>
+            </div>
+          </div>
+        </Box>
       </div>
     </template>
     <template #navigation>
@@ -53,7 +68,7 @@ import { mapGetters, mapMutations } from 'vuex'
 import OnboardingNavigation from '@/views/Onboarding/components/OnboardingNavigation'
 import OnboardingHeading from '@/views/Onboarding/components/OnboardingHeading'
 import OnboardingPage from '@/views/Onboarding/components/OnboardingPage'
-import DemoOption from '@/views/Onboarding/components/DemoOption'
+import Box from '@/views/Onboarding/components/Box'
 
 export default {
   name: 'AddingDataplanes',
@@ -61,7 +76,7 @@ export default {
     OnboardingNavigation,
     OnboardingHeading,
     OnboardingPage,
-    DemoOption,
+    Box,
   },
   computed: {
     ...mapGetters({

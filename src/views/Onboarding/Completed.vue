@@ -4,32 +4,30 @@
       <OnboardingHeading
         title="Go to the dashboard"
         description="You have completed the initial wizard! You can now visualize the dashboard were you can find:"
+        :show-skip="false"
       />
     </template>
     <template #content>
       <div>
         <div class="justify-between flex my-4">
-          <div class="w-24 h-24 justify-center items-center flex border border-gray-500">
-            Option
-          </div>
-          <div class="w-24 h-24 justify-center items-center flex border border-gray-500">
-            Option
-          </div>
-          <div class="w-24 h-24 justify-center items-center flex border border-gray-500">
-            Option
-          </div>
-          <div class="w-24 h-24 justify-center items-center flex border border-gray-500">
-            Option
-          </div>
-          <div class="w-24 h-24 justify-center items-center flex border border-gray-500">
-            Option
-          </div>
+          <Box
+            v-for="item in items"
+            :key="item"
+            small
+          >
+            <div class="flex h-full items-end font-bold tracking-wider">
+              {{ item }}
+            </div>
+          </Box>
         </div>
       </div>
     </template>
 
     <template #navigation>
-      <OnboardingNavigation next-step="global-overview" />
+      <OnboardingNavigation
+        next-step="global-overview"
+        next-step-title="View Dashboard"
+      />
     </template>
   </OnboardingPage>
 </template>
@@ -37,6 +35,7 @@
 <script>
 import OnboardingNavigation from '@/views/Onboarding/components/OnboardingNavigation'
 import OnboardingHeading from '@/views/Onboarding/components/OnboardingHeading'
+import Box from '@/views/Onboarding/components/Box'
 import OnboardingPage from '@/views/Onboarding/components/OnboardingPage'
 
 export default {
@@ -45,6 +44,12 @@ export default {
     OnboardingNavigation,
     OnboardingHeading,
     OnboardingPage,
+    Box,
+  },
+  data() {
+    return {
+      items: ['MESHES', 'ZONES', 'SERVICES', 'DPPs', 'POLICIES'],
+    }
   },
 }
 </script>

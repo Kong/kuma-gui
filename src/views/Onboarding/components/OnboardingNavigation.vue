@@ -1,9 +1,9 @@
 <template>
-  <div class="mt-4 flex justify-between items-center">
+  <div :class="classes">
     <KButton
       v-show="previousStep"
-      class="mr-4"
-      appearance="secondary"
+      appearance="primary"
+      class="navigation-button navigation-button--back"
       :to="{
         name: previousStep,
       }"
@@ -14,21 +14,21 @@
 
     <div
       v-if="$slots.selector"
-      class="radio flex justify-between w-3/5 md:w-1/2 lg:w-2/5"
+      class="radio flex justify-between w-full sm:w-3/5 md:w-1/2 lg:w-2/5"
     >
       <slot name="selector" />
     </div>
 
     <KButton
       v-if="shouldDisplayNext"
-      class="next-button"
+      class="navigation-button navigation-button--next"
       appearance="primary"
       :to="{
         name: nextStep,
       }"
       @click.native="changeStep(nextStep)"
     >
-      Next
+      {{ nextStepTitle }}
     </KButton>
   </div>
 </template>
@@ -50,6 +50,21 @@ export default {
       type: String,
       default: '',
     },
+    nextStepTitle: {
+      type: String,
+      default: 'Next',
+    },
+  },
+  computed: {
+    classes() {
+      return [
+        'mt-10 flex items-center flex-col sm:flex-row',
+        {
+          'justify-between': this.previousStep,
+          'justify-end': !this.previousStep,
+        },
+      ]
+    },
   },
   methods: {
     ...mapActions('onboarding', ['completeOnboarding', 'changeStep']),
@@ -58,13 +73,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.next-button {
-  --KButtonPrimaryBase: #5da46f;
-  --KButtonPrimaryHover: #5da46f;
-  --KButtonPrimaryActive: #5da46f;
+.navigation-button {
+  @apply text-lg font-bold;
+
+  --KButtonPaddingY: 12px;
+  --KButtonPaddingX: 48px;
+  --KButtonRadius: 25px;
+
+  &--back {
+    color: #646464 !important;
+    --KButtonPrimaryBase: #f6f8fd;
+    --KButtonPrimaryHover: #{darken(#f6f8fd, 5%)};
+    --KButtonPrimaryActive: #{darken(#f6f8fd, 5%)};
+  }
+  &--next {
+    --KButtonPrimaryBase: #5da46f;
+    --KButtonPrimaryHover: #{darken(#5da46f, 5%)};
+    --KButtonPrimaryActive: #{darken(#5da46f, 5%)};
+  }
 }
 
-.radio {
+.k-radio {
   --KRadioPrimary: #5da46f;
   color: #5da46f;
 }

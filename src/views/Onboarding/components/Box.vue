@@ -3,21 +3,13 @@
     :class="classes"
     @click="$emit('clicked')"
   >
-    <div>
-      <img :src="imageUrl">
-      <div class="ml-3">
-        <p class="uppercase font-bold tracking-wider">
-          {{ title }}
-        </p>
-        <p>{{ subTitle }}</p>
-      </div>
-    </div>
+    <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DemoOption',
+  name: 'Box',
   props: {
     active: {
       type: Boolean,
@@ -25,32 +17,39 @@ export default {
     },
     type: {
       type: String,
-      required: true,
+      default: '',
     },
     title: {
       type: String,
-      required: true,
+      default: '',
     },
     subTitle: {
       type: String,
-      required: true,
+      default: '',
+    },
+    small: {
+      type: Boolean,
+      default: false,
     },
   },
 
   computed: {
     classes() {
-      return ['add-option-box', this.active ? 'add-option-box--active' : '']
-    },
-    imageUrl() {
-      return require(`@/assets/images/new-service-${this.type}.svg?external`)
+      return [
+        'box',
+        {
+          'box--active': this.active,
+          'box--small': this.small,
+        },
+      ]
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.add-option-box {
-  @apply w-64 h-64 p-12 cursor-pointer flex items-center justify-center;
+.box {
+  @apply w-64 h-64 p-12 flex items-center justify-center;
 
   border: 3px solid #c2c2c2;
   border-radius: 5px;
@@ -58,6 +57,10 @@ export default {
 
   &--active {
     border-color: #7b2bbc;
+  }
+
+  &--small {
+    @apply w-32 h-40 p-6;
   }
 }
 </style>

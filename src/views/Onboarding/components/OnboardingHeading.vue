@@ -9,18 +9,15 @@
     >
       {{ description }}
     </p>
-    <div class="absolute right-0 top-0 mt-4 m-a flex items-center">
+    <div
+      v-if="showSkip"
+      class="absolute right-0 top-0 mt-4 m-a flex items-center"
+    >
       <KButton
         class="skip-button"
         appearance="btn-link"
         size="small"
-        :to="{
-          name: 'global-overview',
-          params: {
-            mesh: 'all',
-          },
-        }"
-        @click.native="completeOnboarding"
+        @click.native="skipOnboarding"
       >
         Skip Setup
       </KButton>
@@ -41,9 +38,22 @@ export default {
       type: String,
       default: '',
     },
+    showSkip: {
+      type: Boolean,
+      default: true,
+    },
   },
   methods: {
     ...mapActions('onboarding', ['completeOnboarding']),
+    skipOnboarding() {
+      this.completeOnboarding()
+      this.$router.push({
+        name: 'global-overview',
+        params: {
+          mesh: 'all',
+        },
+      })
+    },
   },
 }
 </script>

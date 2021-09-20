@@ -21,7 +21,7 @@
               appearance="primary"
               size="small"
               class="action-button"
-              :to="{ path: '/get-started' }"
+              :to="{ name: 'onboarding-welcome' }"
             >
               Get Started
             </KButton>

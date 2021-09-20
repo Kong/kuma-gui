@@ -491,7 +491,8 @@ export default (store: Store<RootInterface>) => {
   //     })
   //   }
 
-  //   const showOnboarding = store.getters.showOnboarding
+  //   const showOnboarding = store.getters['onboarding/showOnboarding']
+  //   const isCompleted = store.state.onboarding.isCompleted
 
   //   const onboardingRoute = to.meta.onboardingProcess
 
@@ -502,8 +503,10 @@ export default (store: Store<RootInterface>) => {
   //     // if someone never had onboarding and do not fulfiled condition to skip it
   //     // and try to access some other page than onboarding ones
   //     // then redirect into first onboarding page
-  //   } else if (!hasOnboarded && !onboardingRoute && showOnboarding) {
-  //     next({ name: 'setup-welcome' })
+  //   } else if (!onboardingRoute && showOnboarding && !isCompleted) {
+  //     const name = localStorage.getItem('onboarding/step') || 'onboarding-welcome'
+
+  //     next({ name })
   //   } else {
   //     next()
   //   }
