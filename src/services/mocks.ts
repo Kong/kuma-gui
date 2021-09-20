@@ -89,7 +89,6 @@ const mockFilenameBasePaths: string[] = [
   'zones+insights/zone-2',
   'zones+insights/zone-3',
   'zones+insights/cluster-1',
-
   'meshes/default/dataplanes+insights/cluster-1.backend-02',
   'meshes/default/dataplanes+insights/cluster-1.backend-03',
   'meshes/default/dataplanes+insights/cluster-1.ingress-02',

@@ -7,16 +7,14 @@
       <KLoader />
     </div>
 
-    <div v-else>
+    <div v-else-if="status !== 'OK'">
       <GlobalHeader />
-      <router-view v-if="status === 'OK'" />
-      <main
-        v-else
-        class="main-content"
-      >
+      <main class="main-content">
         <ApiErrorMessage />
       </main>
     </div>
+
+    <router-view v-else />
   </div>
 </template>
 

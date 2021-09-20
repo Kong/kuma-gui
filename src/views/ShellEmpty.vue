@@ -1,14 +1,10 @@
 <template>
-  <div class="main-content-container">
-    <div class="main-content">
-      <transition
-        mode="out-in"
-        name="fade"
-      >
-        <router-view />
-      </transition>
-    </div>
-  </div>
+  <transition
+    mode="out-in"
+    name="fade"
+  >
+    <router-view />
+  </transition>
 </template>
 
 <script>

@@ -2,703 +2,787 @@
 
 exports[`Shell.vue renders component with route 1`] = `
 <div>
-  <div
-    class="main-content-container"
-  >
-    <aside
-      class="has-subnav subnav-expanded"
-      id="the-sidebar"
+  <div>
+    <header
+      class="main-header px-4 py-1 flex justify-between items-center"
     >
       <div
-        class="main-nav"
+        class="py-1 md:py-0 flex justify-between items-center"
       >
-        <div
-          class="top-nav"
+        <a
+          aria-current="page"
+          class="logo router-link-exact-active router-link-active"
+          href="#/"
         >
-          <div
-            class="nav-item is-menu-item"
-            iconcustom=""
-            subnav="[object Object]"
-          >
-             
-            <a
-              aria-current="page"
-              class="router-link-exact-active router-link-active"
-              href="#/"
-            >
-              <div
-                class="nav-icon"
-              >
-                <!---->
-              </div>
-               
-              <div
-                class="nav-link"
-              >
-                
-        Service Mesh
-      
-              </div>
-               
-            </a>
-          </div>
-        </div>
+          <img
+            alt="null Logo"
+            src="@/assets/images/product-logo.png?external"
+          />
+        </a>
          
         <div
-          class="bottom-nav"
+          class="my-0 mx-6 upgrade-check-wrapper"
         >
           <div
-            class="nav-item is-menu-item"
+            class="upgrade-check"
           >
-             
-            <a
-              aria-current="page"
-              class="router-link-exact-active router-link-active"
-              href="#/"
-            >
-              <div
-                class="nav-icon"
-              >
-                <svg
-                  class="kong-icon kong-icon-gearFilled"
-                  data-v-a7c9c1d2=""
-                  height="18"
-                  role="img"
-                  viewBox="0 0 18 18"
-                  width="18"
-                >
-                  <title
-                    data-v-a7c9c1d2=""
-                  >
-                    gearFilled
-                  </title>
-                  <g
-                    data-v-a7c9c1d2=""
-                  >
-                    <path
-                      d="M8.63962039 0c.2152152 0 .40628463.13771505.47434165.34188612l.63997656 1.91853291c.3708976.11319954.7265407.26136452 1.0630881.4406537l1.8103874-.9038671c.1924944-.09624716.4249801-.05851992.5771602.09366021l.9045599.90455983c.1521801.15218013.1899073.38466585.0936602.57716018l-.904073 1.81000104c.1795192.33691975.3278441.69298066.44112 1.06432821l1.9182725.63912286C15.862285 6.95409498 16 7.14516441 16 7.36037961v1.27924078c0 .2152152-.137715.40628463-.3418861.47434165l-1.918532.63997355c-.1132072.37092351-.2613848.72659041-.4406907 1.06315871l.9039032 1.8103198c.0962471.1924944.0585199.4249801-.0936602.5771602l-.9045599.9045599c-.1521801.1521801-.3846658.1899073-.5771602.0936602l-1.8103171-.9039046c-.3365681.179306-.692235.3274837-1.0631584.4406912l-.63997656 1.9185329C9.04590502 15.862285 8.85483559 16 8.63962039 16H7.36037961c-.2152152 0-.40628463-.137715-.47434165-.3418861L6.2460614 13.739581c-.3708976-.1131996-.72654071-.2613646-1.06308807-.4406537l-1.81038748.9038671c-.19249433.0962471-.42498005.0585199-.57716018-.0936602l-.90455983-.9045599c-.15218013-.1521801-.18990737-.3846658-.09366021-.5771602l.90407299-1.810001c-.17951921-.3369197-.32784407-.6929806-.44112007-1.0643282L.34188612 9.11396204C.13771505 9.04590502 0 8.85483559 0 8.63962039V7.36037961c0-.2152152.13771505-.40628463.34188612-.47434165l1.918532-.63997355c.11320723-.37092352.26138479-.72659044.44069063-1.06315869l-.90390312-1.81031987c-.09624716-.19249433-.05851992-.42498005.09366021-.57716018l.90455983-.90455983c.15218013-.15218013.38466585-.18990737.57716018-.09366021l1.81031714.90390458c.33656815-.17930601.69223497-.32748375 1.06315841-.44069118L6.88603796.34188612C6.95409498.13771505 7.14516441 0 7.36037961 0h1.27924078zM8 6c-1.1045695 0-2 .8954305-2 2s.8954305 2 2 2 2-.8954305 2-2-.8954305-2-2-2z"
-                      data-v-a7c9c1d2=""
-                      fill="var(--SidebarIconColor)"
-                      fill-rule="evenodd"
-                    />
-                  </g>
-                </svg>
-              </div>
-               
-              <div
-                class="nav-link"
-              >
-                
-        Diagnostics
-      
-              </div>
-               
-            </a>
+            <!---->
           </div>
         </div>
       </div>
        
       <div
-        class="secondary-nav"
+        class="flex justify-between items-center"
       >
         <div
-          class="mt-3"
+          class="k-alert py-1 success small"
+          data-v-14c8a976=""
+          role="alert"
         >
-          <div
-            class="px-4 pb-4"
+          <!---->
+          <!---->
+          <span
+            data-v-14c8a976=""
           >
-            <div>
-              <h3
-                class="menu-title uppercase"
+            <div
+              class="alert-content flex items-center text-sm"
+              data-v-14c8a976=""
+            >
+              <div
+                class="mr-3"
+                data-v-14c8a976=""
               >
                 
-      Filter by Mesh:
-    
-              </h3>
+        Do more with Kuma 
+                <span
+                  class="alert-content__arrow"
+                  data-v-14c8a976=""
+                >
+                  →
+                </span>
+              </div>
                
-              <select
-                class="mesh-selector"
-                id="mesh-selector"
-                name="mesh-selector"
+              <div
+                data-v-14c8a976=""
               >
-                <option
-                  value="all"
+                <a
+                  class="k-button no-underline success-button small primary"
+                  data-v-14c8a976=""
+                  data-v-38fa8ecf=""
+                  href="https://kuma.io/enterprise/?utm_source=Kuma&utm_medium=Kuma-GUI"
+                  target="_blank"
+                  type="button"
                 >
                   
-        All Meshes
-      
-                </option>
+          Enterprise
+        
+                </a>
+              </div>
+            </div>
+          </span>
+        </div>
+         
+        <!---->
+      </div>
+    </header>
+     
+    <div
+      class="main-content-container"
+    >
+      <aside
+        class="has-subnav subnav-expanded"
+        id="the-sidebar"
+      >
+        <div
+          class="main-nav"
+        >
+          <div
+            class="top-nav"
+          >
+            <div
+              class="nav-item is-menu-item"
+              iconcustom=""
+              subnav="[object Object]"
+            >
+               
+              <a
+                aria-current="page"
+                class="router-link-exact-active router-link-active"
+                href="#/"
+              >
+                <div
+                  class="nav-icon"
+                >
+                  <!---->
+                </div>
                  
-              </select>
+                <div
+                  class="nav-link"
+                >
+                  
+        Service Mesh
+      
+                </div>
+                 
+              </a>
+            </div>
+          </div>
+           
+          <div
+            class="bottom-nav"
+          >
+            <div
+              class="nav-item is-menu-item"
+            >
+               
+              <a
+                aria-current="page"
+                class="router-link-exact-active router-link-active"
+                href="#/"
+              >
+                <div
+                  class="nav-icon"
+                >
+                  <svg
+                    class="kong-icon kong-icon-gearFilled"
+                    data-v-a7c9c1d2=""
+                    height="18"
+                    role="img"
+                    viewBox="0 0 18 18"
+                    width="18"
+                  >
+                    <title
+                      data-v-a7c9c1d2=""
+                    >
+                      gearFilled
+                    </title>
+                    <g
+                      data-v-a7c9c1d2=""
+                    >
+                      <path
+                        d="M8.63962039 0c.2152152 0 .40628463.13771505.47434165.34188612l.63997656 1.91853291c.3708976.11319954.7265407.26136452 1.0630881.4406537l1.8103874-.9038671c.1924944-.09624716.4249801-.05851992.5771602.09366021l.9045599.90455983c.1521801.15218013.1899073.38466585.0936602.57716018l-.904073 1.81000104c.1795192.33691975.3278441.69298066.44112 1.06432821l1.9182725.63912286C15.862285 6.95409498 16 7.14516441 16 7.36037961v1.27924078c0 .2152152-.137715.40628463-.3418861.47434165l-1.918532.63997355c-.1132072.37092351-.2613848.72659041-.4406907 1.06315871l.9039032 1.8103198c.0962471.1924944.0585199.4249801-.0936602.5771602l-.9045599.9045599c-.1521801.1521801-.3846658.1899073-.5771602.0936602l-1.8103171-.9039046c-.3365681.179306-.692235.3274837-1.0631584.4406912l-.63997656 1.9185329C9.04590502 15.862285 8.85483559 16 8.63962039 16H7.36037961c-.2152152 0-.40628463-.137715-.47434165-.3418861L6.2460614 13.739581c-.3708976-.1131996-.72654071-.2613646-1.06308807-.4406537l-1.81038748.9038671c-.19249433.0962471-.42498005.0585199-.57716018-.0936602l-.90455983-.9045599c-.15218013-.1521801-.18990737-.3846658-.09366021-.5771602l.90407299-1.810001c-.17951921-.3369197-.32784407-.6929806-.44112007-1.0643282L.34188612 9.11396204C.13771505 9.04590502 0 8.85483559 0 8.63962039V7.36037961c0-.2152152.13771505-.40628463.34188612-.47434165l1.918532-.63997355c.11320723-.37092352.26138479-.72659044.44069063-1.06315869l-.90390312-1.81031987c-.09624716-.19249433-.05851992-.42498005.09366021-.57716018l.90455983-.90455983c.15218013-.15218013.38466585-.18990737.57716018-.09366021l1.81031714.90390458c.33656815-.17930601.69223497-.32748375 1.06315841-.44069118L6.88603796.34188612C6.95409498.13771505 7.14516441 0 7.36037961 0h1.27924078zM8 6c-1.1045695 0-2 .8954305-2 2s.8954305 2 2 2 2-.8954305 2-2-.8954305-2-2-2z"
+                        data-v-a7c9c1d2=""
+                        fill="var(--SidebarIconColor)"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                 
+                <div
+                  class="nav-link"
+                >
+                  
+        Diagnostics
+      
+                </div>
+                 
+              </a>
             </div>
           </div>
         </div>
          
         <div
-          class="subnav-title"
+          class="secondary-nav"
         >
-          <span
-            class="text-uppercase"
+          <div
+            class="mt-3"
           >
+            <div
+              class="px-4 pb-4"
+            >
+              <div>
+                <h3
+                  class="menu-title uppercase"
+                >
+                  
+      Filter by Mesh:
+    
+                </h3>
+                 
+                <select
+                  class="mesh-selector"
+                  id="mesh-selector"
+                  name="mesh-selector"
+                >
+                  <option
+                    value="all"
+                  >
+                    
+        All Meshes
+      
+                  </option>
+                   
+                </select>
+              </div>
+            </div>
+          </div>
+           
+          <div
+            class="subnav-title"
+          >
+            <span
+              class="text-uppercase"
+            >
+              <a
+                aria-current="page"
+                class="router-link-exact-active router-link-active"
+                href="#/"
+              >
+                
+          Service Mesh
+        
+              </a>
+            </span>
+          </div>
+            
+          <div
+            class="nav-item is-menu-item"
+          >
+             
             <a
               aria-current="page"
               class="router-link-exact-active router-link-active"
               href="#/"
             >
-              
-          Service Mesh
-        
-            </a>
-          </span>
-        </div>
-          
-        <div
-          class="nav-item is-menu-item"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
-          >
-            <!---->
-             
-            <div
-              class="nav-link"
-            >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Overview
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Zones
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Zone Ingresses
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-          pathflip="true"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
+            pathflip="true"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Meshes
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item is-title"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item is-title"
           >
-            <!---->
              
-            <div
-              class="title-text"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              <span
-                class="text-uppercase"
+              <!---->
+               
+              <div
+                class="title-text"
               >
-                
+                <span
+                  class="text-uppercase"
+                >
+                  
         Services
       
-              </span>
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item is-nested"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+                </span>
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item is-nested"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Internal
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item is-nested"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item is-nested"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         External
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item is-title"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item is-title"
           >
-            <!---->
              
-            <div
-              class="title-text"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              <span
-                class="text-uppercase"
+              <!---->
+               
+              <div
+                class="title-text"
               >
-                
+                <span
+                  class="text-uppercase"
+                >
+                  
         Data plane proxies
       
-              </span>
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+                </span>
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
-        All
-      
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item is-nested"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
-          >
-            <!---->
-             
-            <div
-              class="nav-link"
-            >
-              
-        Standard
-      
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item is-nested"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
-          >
-            <!---->
-             
-            <div
-              class="nav-link"
-            >
-              
-        Gateway
-      
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item is-title"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
-          >
-            <!---->
-             
-            <div
-              class="title-text"
-            >
-              <span
-                class="text-uppercase"
+              <!---->
+               
+              <div
+                class="nav-link"
               >
                 
+        All
+      
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item is-nested"
+          >
+             
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
+            >
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
+        Standard
+      
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item is-nested"
+          >
+             
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
+            >
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
+        Gateway
+      
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item is-title"
+          >
+             
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
+            >
+              <!---->
+               
+              <div
+                class="title-text"
+              >
+                <span
+                  class="text-uppercase"
+                >
+                  
         Policies
       
-              </span>
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-          parent="policies"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+                </span>
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
+            parent="policies"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Circuit Breakers
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-          parent="policies"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
+            parent="policies"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Fault Injections
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-          parent="policies"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
+            parent="policies"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Health Checks
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-          parent="policies"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
+            parent="policies"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Proxy Templates
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-          parent="policies"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
+            parent="policies"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Rate Limits
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-          parent="policies"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
+            parent="policies"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Retries
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-          parent="policies"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
+            parent="policies"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Timeouts
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-          parent="policies"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
+            parent="policies"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Traffic Logs
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-          parent="policies"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
+            parent="policies"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Traffic Permissions
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-          parent="policies"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
+            parent="policies"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Traffic Routes
       
-            </div>
-             
-          </a>
-        </div>
-        <div
-          class="nav-item is-menu-item"
-          parent="policies"
-        >
-           
-          <a
-            aria-current="page"
-            class="router-link-exact-active router-link-active"
-            href="#/"
+              </div>
+               
+            </a>
+          </div>
+          <div
+            class="nav-item is-menu-item"
+            parent="policies"
           >
-            <!---->
              
-            <div
-              class="nav-link"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
+              href="#/"
             >
-              
+              <!---->
+               
+              <div
+                class="nav-link"
+              >
+                
         Traffic Traces
       
-            </div>
-             
-          </a>
+              </div>
+               
+            </a>
+          </div>
         </div>
-      </div>
-    </aside>
-     
-    <main
-      class="main-content"
-    >
-      <div
-        class="page"
+      </aside>
+       
+      <main
+        class="main-content"
       >
         <!---->
          
-        <div>
-          <ul
-            class="krumbs"
+        <ul
+          class="krumbs"
+          data-v-4a781a7e=""
+        >
+          <li
+            class="krumb-item truncate"
             data-v-4a781a7e=""
+            style="max-width: 38ch;"
           >
-            <li
-              class="krumb-item truncate"
+            <a
+              aria-current="page"
+              class="router-link-exact-active router-link-active"
               data-v-4a781a7e=""
-              style="max-width: 38ch;"
+              href="#/"
             >
-              <a
-                aria-current="page"
-                class="router-link-exact-active router-link-active"
-                data-v-4a781a7e=""
-                href="#/"
-              >
-                
-              </a>
-            </li>
-          </ul>
-        </div>
+              
+            </a>
+          </li>
+        </ul>
          
-        <div>
-          
+        <transition-stub
+          mode="out-in"
+          name="fade"
+        >
+          <div>
+            
   TestComponent
 
-        </div>
-      </div>
-    </main>
+          </div>
+        </transition-stub>
+      </main>
+    </div>
   </div>
 </div>
 `;

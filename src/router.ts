@@ -302,29 +302,90 @@ export default (store: Store<RootInterface>) => {
     },
     // Onboarding
     {
-      path: '/get-started',
-      redirect: { name: 'setup-welcome' },
+      path: '/onboarding',
+      redirect: { name: 'onboarding-welcome' },
       component: () => import(/* webpackChunkName: "shell-empty" */ '@/views/ShellEmpty.vue'),
       children: [
         {
           path: 'welcome',
-          name: 'setup-welcome',
+          name: 'onboarding-welcome',
           meta: {
             title: `Welcome to ${process.env.VUE_APP_NAMESPACE}!`,
             hideStatus: true,
             onboardingProcess: true,
           },
-          component: () => import(/* webpackChunkName: "onboarding-get-started" */ '@/views/Onboarding/GetStarted.vue'),
+          component: () => import(/* webpackChunkName: "onboarding-welcome" */ '@/views/Onboarding/Welcome.vue'),
         },
         {
-          path: 'complete',
-          name: 'setup-complete',
+          path: 'deployment-types',
+          name: 'onboarding-deployment-types',
           meta: {
-            title: 'Congratulations!',
             hideStatus: true,
             onboardingProcess: true,
           },
-          component: () => import(/* webpackChunkName: "onboarding-complete" */ '@/views/Onboarding/Complete.vue'),
+          component: () =>
+            import(/* webpackChunkName: "onboarding-deployment-types" */ '@/views/Onboarding/DeploymentTypes.vue'),
+        },
+        {
+          path: 'backend-types',
+          name: 'onboarding-backend-types',
+          meta: {
+            hideStatus: true,
+            onboardingProcess: true,
+          },
+          component: () =>
+            import(/* webpackChunkName: "onboarding-backend-types" */ '@/views/Onboarding/BackendTypes.vue'),
+        },
+        {
+          path: 'populating-mesh',
+          name: 'onboarding-populating-mesh',
+          meta: {
+            hideStatus: true,
+            onboardingProcess: true,
+          },
+          component: () =>
+            import(/* webpackChunkName: "onboarding-populating-mesh" */ '@/views/Onboarding/PopulatingMesh.vue'),
+        },
+        {
+          path: 'adding-dpp',
+          name: 'onboarding-adding-dpp',
+          meta: {
+            hideStatus: true,
+            onboardingProcess: true,
+          },
+          component: () =>
+            import(/* webpackChunkName: "onboarding-adding-dpp" */ '@/views/Onboarding/AddingDataplanes.vue'),
+        },
+        {
+          path: 'adding-dpp-code',
+          name: 'onboarding-adding-dpp-code',
+          meta: {
+            hideStatus: true,
+            onboardingProcess: true,
+          },
+          component: () =>
+            import(/* webpackChunkName: "onboarding-adding-dpp-code" */ '@/views/Onboarding/AddingDataplanesCode.vue'),
+        },
+        {
+          path: 'dataplanes-overview',
+          name: 'onboarding-dataplanes-overview',
+          meta: {
+            hideStatus: true,
+            onboardingProcess: true,
+          },
+          component: () =>
+            import(
+              /* webpackChunkName: "onboarding-dataplanes-overview" */ '@/views/Onboarding/DataplanesOverview.vue'
+            ),
+        },
+        {
+          path: 'completed',
+          name: 'onboarding-completed',
+          meta: {
+            hideStatus: true,
+            onboardingProcess: true,
+          },
+          component: () => import(/* webpackChunkName: "onboarding-completed" */ '@/views/Onboarding/Completed.vue'),
         },
       ],
     },
@@ -332,7 +393,7 @@ export default (store: Store<RootInterface>) => {
       // Entity Wizard
       path: '/wizard',
       name: 'wizard',
-      component: () => import(/* webpackChunkName: "shell-empty" */ '@/views/ShellEmpty.vue'),
+      component: () => import(/* webpackChunkName: "shell-empty" */ '@/views/ShellWithHeader.vue'),
       children: [
         {
           path: 'mesh',
@@ -418,36 +479,38 @@ export default (store: Store<RootInterface>) => {
    * so that they're not sent through it again.
    */
 
-  router.beforeEach(async (to, from, next) => {
-    // eslint-disable-next-line no-unmodified-loop-condition
-    // This below is to make sure the inital calls have been fulfilled and it does not try to
-    // access any route before it will be resolved
-    while (store.getters.globalLoading) {
-      await new Promise(resolve => {
-        setTimeout(() => {
-          resolve(null)
-        }, 20)
-      })
-    }
+  // router.beforeEach(async (to, from, next) => {
+  //   // eslint-disable-next-line no-unmodified-loop-condition
+  //   // This below is to make sure the inital calls have been fulfilled and it does not try to
+  //   // access any route before it will be resolved
+  //   while (store.getters.globalLoading) {
+  //     await new Promise(resolve => {
+  //       setTimeout(() => {
+  //         resolve(null)
+  //       }, 20)
+  //     })
+  //   }
 
-    const hasOnboarded = JSON.parse(localStorage.getItem('kumaOnboardingComplete') || 'false')
-    const showOnboarding = store.getters.showOnboarding
+  //   const showOnboarding = store.getters['onboarding/showOnboarding']
+  //   const isCompleted = store.state.onboarding.isCompleted
 
-    const onboardingRoute = to.meta.onboardingProcess
+  //   const onboardingRoute = to.meta.onboardingProcess
 
-    // If someone is going to open onboarding page but fulfiled already conditionn related to
-    // show onboarding, then redirect user to overview
-    if (onboardingRoute && !showOnboarding) {
-      next({ name: 'global-overview' })
-      // if someone never had onboarding and do not fulfiled condition to skip it
-      // and try to access some other page than onboarding ones
-      // then redirect into first onboarding page
-    } else if (!hasOnboarded && !onboardingRoute && showOnboarding) {
-      next({ name: 'setup-welcome' })
-    } else {
-      next()
-    }
-  })
+  //   // If someone is going to open onboarding page but fulfiled already conditionn related to
+  //   // show onboarding, then redirect user to overview
+  //   if (onboardingRoute && !showOnboarding) {
+  //     next({ name: 'global-overview' })
+  //     // if someone never had onboarding and do not fulfiled condition to skip it
+  //     // and try to access some other page than onboarding ones
+  //     // then redirect into first onboarding page
+  //   } else if (!onboardingRoute && showOnboarding && !isCompleted) {
+  //     const name = localStorage.getItem('onboarding/step') || 'onboarding-welcome'
+
+  //     next({ name })
+  //   } else {
+  //     next()
+  //   }
+  // })
 
   return router
 }

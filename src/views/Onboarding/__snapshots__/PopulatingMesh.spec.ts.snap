@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopulatingMesh.vue renders snapshot 1`] = `
+<div>
+  <div
+    class="onboarding-container"
+  >
+    <div
+      class="onboarding-container__header"
+    >
+      <div
+        class="relative"
+      >
+        <h1
+          class="onboarding-title"
+        >
+          
+    3. Populating a Mesh
+  
+        </h1>
+         
+        <!---->
+         
+        <div
+          class="absolute right-0 top-0 mt-4 m-a flex items-center"
+        >
+          <button
+            class="k-button skip-button small btn-link"
+            data-v-38fa8ecf=""
+            type="button"
+          >
+            
+      Skip Setup
+    
+          </button>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="onboarding-container__content"
+    >
+      <div
+        class="w-full"
+      >
+        <p
+          class="text-center"
+        >
+          
+      Kuma is a multi-tenant system that can support multiple service meshes in the same cluster:
+    
+        </p>
+         
+        <div
+          class="flex justify-center mt-10 mb-16 pb-16"
+        >
+          <div
+            class="w-full sm:w-3/5 lg:w-2/5 p-4"
+          >
+            <table
+              class="k-table has-hover is-small side-border"
+              data-v-bfeabd48=""
+            >
+              <thead
+                data-v-bfeabd48=""
+              >
+                <tr
+                  data-v-bfeabd48=""
+                >
+                  <th
+                    class=""
+                    data-v-bfeabd48=""
+                  >
+                     Name 
+                  </th>
+                  <th
+                    class=""
+                    data-v-bfeabd48=""
+                  >
+                     Services 
+                  </th>
+                  <th
+                    class=""
+                    data-v-bfeabd48=""
+                  >
+                     DPPs 
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                data-v-bfeabd48=""
+              >
+                <tr
+                  data-v-bfeabd48=""
+                >
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    default
+                  </td>
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    0
+                  </td>
+                  <td
+                    data-v-bfeabd48=""
+                  >
+                    0
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+         
+        <p
+          class="text-center"
+        >
+          
+      Kuma automatically creates a “default” mesh that’s ready-to-use. Let’s add services next.
+    
+        </p>
+      </div>
+    </div>
+     
+    <div
+      class="mt-10 flex items-center flex-col sm:flex-row justify-between"
+    >
+      <a
+        aria-current="page"
+        class="k-button navigation-button navigation-button--back router-link-exact-active router-link-active primary"
+        data-v-38fa8ecf=""
+        href="#/"
+        type="button"
+      >
+        
+    Back
+  
+      </a>
+       
+      <!---->
+       
+      <a
+        aria-current="page"
+        class="k-button navigation-button navigation-button--next router-link-exact-active router-link-active primary"
+        data-v-38fa8ecf=""
+        href="#/"
+        type="button"
+      >
+        
+    Next
+  
+      </a>
+    </div>
+  </div>
+</div>
+`;
