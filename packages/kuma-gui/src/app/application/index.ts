@@ -15,6 +15,7 @@ import type { Can } from './services/can'
 import type { EnvVars } from './services/env/Env'
 import Env from './services/env/Env'
 import I18n from './services/i18n/I18n'
+import storage from './services/storage'
 import type { Source } from '@/app/application/services/data-source'
 import { create, destroy, getSource, DataSourcePool } from '@/app/application/services/data-source'
 import { services as kuma } from '@/app/kuma'
@@ -81,6 +82,9 @@ const $ = {
 
   i18n: token<ReturnType<typeof I18n>>('i18n'),
   enUs: token('i18n.locale.enUs'),
+
+  storage: token<ReturnType<typeof storage>>('application.storage'),
+  storagePrefix: token<string>('application.storage.prefix'),
 }
 
 const addModule = (item: RouteRecordRaw, parent?: RouteRecordRaw) => {
@@ -181,6 +185,13 @@ export const services = (app: Record<string, Token>): ServiceDefinition[] => {
 
     [$.fetch, {
       service: () => fetch,
+    }],
+
+    [$.storage, {
+      service: storage,
+      arguments: [
+        app.storagePrefix,
+      ],
     }],
 
     [$.can, {

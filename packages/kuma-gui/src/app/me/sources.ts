@@ -2,38 +2,32 @@ import merge from 'deepmerge'
 
 import { defineSources } from '../application/services/data-source'
 
-export const sources = (prefix: string = 'me', storage: Storage = window.localStorage) => {
-  const get = async (key: string): Promise<object> => {
-    try {
-      return JSON.parse(storage.getItem(`${prefix}:${key}`) ?? '{}')
-    } catch (e) {
-      console.error(e)
-    }
-    return {}
-  }
-  const set = async (key: string, value: object): Promise<object> => {
-    try {
-      storage.setItem(`${prefix}:${key}`, JSON.stringify(value))
-      return value
-    } catch (e) {
-      console.error(e)
-    }
-    return {}
-  }
+type Storage = {
+  get: (key: string) => Promise<object>
+  set: (key: string, value: object) => Promise<object>
+}
+export const sources = ({ get, set }: Storage) => {
   return defineSources({
+    // retrieves both route and global app prefs and merges them
+    // anything route specific overwriting anything global/app specific
     '/me/:route': async (params) => {
-      const json = await get(params.route)
-      const res = merge({
-        params: {
-          size: 50,
+      const [app, route] = await Promise.all([
+        get('/'),
+        get(params.route),
+      ])
+      return merge(
+        {
+          params: {
+            size: 50,
+          },
         },
-      }, json)
-      return res
+        app,
+        route,
+      )
     },
     '/me/:route/:data': async (params) => {
       const json = JSON.parse(params.data)
       const res = merge<object>(await get(params.route), json)
-
       set(params.route, res)
     },
   })
