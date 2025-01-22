@@ -92,6 +92,12 @@ common:
 http:
   api:
     property:
+      name: |
+        { count, plural,
+          =0 { Names }
+          =1 { Name }
+          other { Names }
+        }
       modificationTime: Modified
       creationTime: Created
       tls: TLS
