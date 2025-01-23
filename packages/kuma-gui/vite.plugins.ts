@@ -38,7 +38,11 @@ export const kumaIndexHtmlVars = (): Plugin => {
     transformIndexHtml: (template) => interpolate(template, htmlVars),
   }
 }
-const server = (template: string = './index.html', vars: Partial<KumaHtmlVars> = {}) => async (server: PreviewServer | ViteDevServer) => {
+const server = (
+  template: string = './index.html',
+  vars: Partial<KumaHtmlVars> = {},
+  csp: boolean = true,
+) => async (server: PreviewServer | ViteDevServer) => {
   server.middlewares.use('/', async (req, res, next) => {
     const url = req.originalUrl || ''
     const baseGuiPath = vars.baseGuiPath || '/gui'
@@ -67,16 +71,19 @@ const server = (template: string = './index.html', vars: Partial<KumaHtmlVars> =
           }).filter(([_, value]) => typeof value !== 'undefined')),
         } satisfies KumaHtmlVars,
       )
-      res.setHeader('Content-Security-Policy', [
-        "default-src 'self'",
-        "script-src 'self'",
-        "script-src-elem 'self'",
-        "img-src 'self' data: ",
-        "style-src 'self' 'unsafe-inline'",
-        // in production connect-src would use kuma's environment variable for
-        // setting the location of the HTTP API (or just use the default)
-        "connect-src 'self' localhost:5681 https://kuma.io",
-      ].join(';'))
+      if (csp) {
+        res.setHeader('Content-Security-Policy', [
+          "default-src 'self'",
+          "script-src 'self'",
+          "script-src-elem 'self'",
+          "img-src 'self' data: ",
+          "style-src 'self' 'unsafe-inline'",
+          // in production connect-src would use kuma's environment variable for
+          // setting the location of the HTTP API (or just use the default)
+          "connect-src 'self' localhost:5681 https://kuma.io",
+        ].join(';'))
+      }
+
       res.end(body)
     } else {
       next()
