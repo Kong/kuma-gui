@@ -67,6 +67,16 @@ const server = (template: string = './index.html', vars: Partial<KumaHtmlVars> =
           }).filter(([_, value]) => typeof value !== 'undefined')),
         } satisfies KumaHtmlVars,
       )
+      res.setHeader('Content-Security-Policy', [
+        "default-src 'self'",
+        "script-src 'self'",
+        "script-src-elem 'self'",
+        "img-src 'self' data: ",
+        "style-src 'self' 'unsafe-inline'",
+        // in production connect-src would use kuma's environment variable for
+        // setting the location of the HTTP API (or just use the default)
+        "connect-src 'self' localhost:5681 https://kuma.io",
+      ].join(';'))
       res.end(body)
     } else {
       next()
