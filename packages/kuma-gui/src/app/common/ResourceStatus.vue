@@ -12,19 +12,15 @@
     </template>
 
     <template #body>
-      <div class="status">
-        <template v-if="typeof props.online !== 'undefined'">
-          <template
-            v-for="ratio in [props.online / props.total]"
-            :key="typeof ratio"
-          >
+      <XLayout type="separated">
+        <div class="status">
+          <template v-if="typeof props.online !== 'undefined'">
             <span
-              class="status-online"
-              :class="{ [`status-online--${ratio <= 0.5 ? 'danger' : 'warning'}`]: ratio < 1 }"
+              :class="{ ['text-neutral']: props.online !== props.total }"
             >{{ props.online }}</span><span class="status-separator">/</span>
-          </template>
-        </template><span class="status-total">{{ props.total }}</span>
-      </div>
+          </template><span>{{ props.total }}</span>
+        </div>
+      </XLayout>
     </template>
   </DefinitionCard>
 </template>
@@ -42,15 +38,7 @@ const slots = defineSlots()
 </script>
 
 <style lang="scss" scoped>
-.status-online {
-  color: var(--status-color, currentColor);
-}
-
-.status-online--warning {
-  --status-color: #{$kui-color-text-warning};
-}
-
-.status-online--danger {
-  --status-color: #{$kui-color-text-danger};
+.text-neutral {
+  color: #{$kui-color-text-neutral};
 }
 </style>

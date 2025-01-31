@@ -14,6 +14,7 @@ main-overview:
       meshes: 'Meshes'
       services: 'Services'
       data_plane_proxies: 'Data Plane Proxies'
+      policies: Policies
     zone_control_planes:
       title: 'Zones'
     meshes:
