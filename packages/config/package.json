@@ -17,7 +17,7 @@
   "dependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
     "@eslint/js": "^9.17.0",
-    "@stylistic/eslint-plugin": "^2.13.0",
+    "@stylistic/eslint-plugin": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^8.22.0",
     "@typescript-eslint/parser": "^8.22.0",
     "@vue/eslint-config-typescript": "^14.3.0",
